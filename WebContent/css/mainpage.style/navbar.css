@@ -1,0 +1,35 @@
+#logo-container {
+	display:flex;
+	flex-direction: row;
+}
+
+
+#navbar {
+	height: 10%;
+	background-color : rgb(73, 71, 67, 0.8);
+  	overflow: hidden;
+  	display: flex;
+ 	flex-direction:row;
+  	justify-content: flex-start;
+  	align-items: center;
+  	z-index:11;
+}	
+
+#navbar a {
+  	display: block;
+  	color: #f6f6f6;
+  	text-align: center;
+  	padding: 14px 60px;
+  	text-decoration: none;
+  	font-size: 30px;
+}
+
+#navbar a:hover {
+  	color: #ffd801;
+}
+
+.sticky {
+ 	position: fixed;
+  	top: 0;
+  	width: 100%;
+}
