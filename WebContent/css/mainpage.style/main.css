@@ -9,11 +9,10 @@ html {
 
 
 .mainpanel {
-	position:absolute;
 	top:0px;
 	display:flex;
 	flex-direction: column;
-	z-index:1;
+	z-index:2;
 	height:50%;
 	width:25%;
 	margin-left: 6%;
@@ -29,11 +28,13 @@ html {
 }
 
 .div-button-slide-menu {
+	z-index:6;
   text-align: center;
   padding-top:5%;
 }
 
 .div-button-slide-componi {
+	z-index:6;
   text-align: center;
   padding-top:5%;
 }
@@ -51,10 +52,11 @@ html {
   margin: 4px 2px;
   cursor: pointer;
   font-weight:bold;
+  border: solid 2px #494743;
 }
 
 .button-slide-menu:hover {
-  
+  border: solid 2px white;
   color: white;
 }
 
@@ -72,8 +74,10 @@ html {
   margin: 4px 2px;
   cursor: pointer;
   font-weight:bold;
+  border: solid 2px #ffd801;
 }
 
 .button-slide-componi:hover{
+	border: solid 2px white;
   color: white;
 }

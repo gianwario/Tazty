@@ -9,10 +9,10 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  width: 100%;
   position: absolute;
   top:0px;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Next & previous buttons */
