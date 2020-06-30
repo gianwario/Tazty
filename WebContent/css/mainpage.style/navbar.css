@@ -1,5 +1,6 @@
 
-#navbar {
+	#navbar {
+	margin-top: -1%;
 	position:fixed;
 	width: 100%;
 	min-height: 9%;
@@ -7,27 +8,36 @@
   	overflow: hidden;
   	display: flex;
  	flex-direction:row;
-  	justify-content: flex-start;
+  	justify-content: center;
   	align-items: center;
   	z-index:11;
 }	
 
+
+@media screen and (min-width: 780px){
+
+	
 #navbar a {
+	font-family: 'Open Sans', sans-serif;
   	display: block;
   	color: #f6f6f6;
   	text-align: center;
-  	padding: 14px 60px;
+  	margin-top: 1%;
+  	padding: 10px 30px;
   	text-decoration: none;
-  	font-size: 30px;
+  	font-size: 36px;
 }
 
 #navbar a:hover {
   	color: #ffd801;
 }
+	
+}
 
 .sticky {
  	position: fixed;
-  	top: 0;
+ 	margin-top:10%;
+  	top: 0px;
   	width: 100%;
 }
 

@@ -4,7 +4,7 @@ body{
 .gallery-div {
   padding-left: 60px;
   padding-right: 60px;
-  padding-top:100px;
+  padding-top:40px;
   margin-left:10%;
   margin-right:10%;
 }
@@ -12,11 +12,21 @@ img {
   width: 100%; /* need to overwrite inline dimensions */
   height: 100%;
 }
-h2 {
-  
-  text-align:center;
-  font-size:40px;
-  color:#ffd801;
+
+#title{
+	width: 15%;
+	text-align:center;
+    font-size:40px;
+    color:#ffd801;
+    border-bottom: 2px solid #76d6de;
+    display: inline-block;
+}
+
+#titlecontainer {
+  margin-top: 4%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p{
@@ -27,13 +37,6 @@ p{
 	font-family: 'Open Sans', sans-serif;
 }
 
-.separator{
-	height: 2px;
-	width: 4%;
-	background-color: #76d6de;
-	text-align: center;
-	margin: 2px auto;
-}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

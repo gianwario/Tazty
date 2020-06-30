@@ -19,7 +19,7 @@ figure {
 	height: 300px;
 }
 .project figcaption {
-	padding: 1em;
+	padding-top: 1em;
 	background: #76d6de;
 	color: #fff;
 }
@@ -27,7 +27,7 @@ figure {
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
-	margin: 0;
+	margin-top: 10%;
 }
 .desc_news {
 	margin: .5em 0;
@@ -48,7 +48,7 @@ When the browser is 960px or larger.
 @media screen and (min-width: 960px) {
 	.news-wrapper {
 		max-width: 960px;
-		margin: 0 auto;
+		margin: 3% auto;
 	}
 	.news-container {
 		display: grid;

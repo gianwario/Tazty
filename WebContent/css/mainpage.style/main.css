@@ -15,11 +15,11 @@ html {
 	width: 100%;
 	background-color : rgb(73, 71, 67, 0.8);
 	z-index: 11;
-	position:relative;
+	position:fixed;
+	top:0px;
 }
 
 .mainpanel {
-	top:0px;
 	display:flex;
 	flex-direction: column;
 	z-index:2;
@@ -30,6 +30,7 @@ html {
 }
 
 .text {
+  margin-top: 20%;
   color: #f2f2f2;
   text-align: center;
   font-size: 50px;
@@ -90,4 +91,20 @@ html {
 .button-slide-componi:hover{
 	border: solid 2px white;
   color: white;
+}
+
+#title{
+	width: 15%;
+	text-align:center;
+    font-size:40px;
+    color:#ffd801;
+    border-bottom: 2px solid #76d6de;
+    display: inline-block;
+}
+
+#titlecontainer {
+  padding-top: 5%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }

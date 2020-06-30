@@ -2,49 +2,61 @@
 <html>
 
 <head>
-	<title>Prova</title>
-	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<script src="js/slide.js"></script>
-	<link rel="stylesheet" href="css/mainpage.style/slide.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/news.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/contacts.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/footer.css" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<title>Tazty</title>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+	rel="stylesheet">
+<script src="js/slide.js"></script>
+<link rel="stylesheet" href="css/mainpage.style/slide.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/main.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/navbar.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/news.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/contacts.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/footer.css"
+	type="text/css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+	rel="stylesheet">
 </head>
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
 	onload="currentSlide(1);">
 	<div id="logo">
-		<img src="logo2.png" alt="logo" style="height:12%;width:12%;"> 
+		<img src="logo2.png" alt="logo" style="height: 12%; width: 12%;">
 	</div>
 	<div id="navbar">
-		
-		<a href="#" onClick="homeselected()">Home</a> 
-		<a href="#news">News</a> 
-		<a href="#contact">Contact</a> 
-		<a href="#gallery">Gallery</a>
+
+		<a href="#">Home</a> <a href="#news">News</a> <a href="#contact">Contacts</a>
+		<a href="gallery.html">Gallery</a>
 	</div>
-	
-	
+
+
 	<div id="home">
 		<div class="slideshow-container">
 			<div class="mySlides fade">
-				<img src="css/images/Slide1.jpg" style="width: 100%">	
+				<img src="css/images/Slide1.jpg" style="width: 100%">
 			</div>
-	
+
 			<div class="mySlides fade">
 				<img src="css/images/Slide2.jpg" style="width: 100%">
 			</div>
-	
+
 			<div class="mySlides fade">
 				<img src="css/images/slide3.jpg" style="width: 100%">
 			</div>
-	
+
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
 				onclick="plusSlides(1)">&#10095;</a>
 		</div>
@@ -56,173 +68,167 @@
 			<div class="div-button-slide-componi">
 				<button class="button-slide-componi">Componi il tuo panino</button>
 			</div>
-		</div>		
+		</div>
 	</div>
-	
+
 
 
 
 
 	<div id="news">
-		<h1>News</h1>
-	    <div class="news-wrapper">
-	        <div class="news-container">
-	            <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/01.jpg" alt="Spain building">
-	                    <figcaption>
-	                        <div>
-	                            <h3>The City</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	            <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/02.jpg" alt="a Kiwi, lime, pear" title="Juicy Fruit">
-	                    <figcaption>
-	                        <div>
-	                            <h3>Juicy Fruit</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	             <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/04.jpg" alt="Yellow roller coaster track" title="Roller Track">
-	                    <figcaption>
-	                        <div>
-	                            <h3>Roller Track</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	             <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/05.jpg" alt="Yellow play balls" title="Yellow">
-	                    <figcaption>
-	                        <div>
-	                            <h3>Yellow</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	            <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/03.jpg" alt="Swimming pool" title="Swimming Pool">
-	                    <figcaption>
-	                        <div>
-	                            <h3>Swimming Pool</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	            <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/06.jpg" alt="Side of building" title="The Fourth Wall">
-	                    <figcaption>
-	                        <div>
-	                            <h3>The Fourth Wall</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	            <a class="project" href="#">
-	                <figure>
-	                    <img src="css/images/07.jpg" alt="Skyline" title="Skyline">
-	                    <figcaption>
-	                        <div>
-	                            <h3>Skyline</h3>
-	                            <p class="desc_news">View project</p>
-	                        </div>
-	                    </figcaption>
-	                </figure>
-	            </a>
-	        </div>
-	    </div>
-	</div>
-	
-	<div id="contact">
-		<h1> Contattaci</h1>
-			<div class="box">
-			    <div class="box_sx">
-			        <div class="innerbox_dx"> 
-			            <h2>Informazioni </h2>
-			            <p class="info"> Per qualsiasi informazione, siamo reperibili ai seguenti recapiti: </p>
-			            <div class="contact">
-			                <p class="strong"> <i class="fa fa-phone"> </i>  +39 331 872 9868</p>
-			                <p class="strong"> <i class="fa fa-envelope-o"> </i>  v.pentangelo4@studenti.unisa.it</p>
-			                <p class="strong"> <i class="fa fa-map-marker"> </i>  Somma Vesuviana, bocca del vesuvio (NA)</p>
-			            </div>
-			            <h2>Orari</h2>
-			            <p class="info"> <b>Lunedì - Venerdì</b> 17:00 - 00:00</p>
-			            <p class="info"> <b>Sabato</b>  18:00 - 02:00</p>
-			            <p class="info"> <b>Domenica</b> 12:00 - 15:00  18:00 - 00:00</p>
-			        </div>
-			    </div>
-			    <div class="box_dx">
-			        <div id="google-maps"> 
-			            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6625.405687820863!2d14.40151002901647!3d40.89585125930813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bafb0d7a5f879%3A0x950861277aca3f18!2s80049%20Somma%20Vesuviana%20NA!5e0!3m2!1sit!2sit!4v1593024221562!5m2!1sit!2sit" style="border:0;" allowfullscreen></iframe>
-			        </div>
-			    </div>
+		<div id="titlecontainer">
+			<div id="title">News</div>
+		</div>
+		<div class="news-wrapper">
+			<div class="news-container">
+				<a class="project" href="#">
+					<figure>
+						<img src="css/images/01.jpg" alt="Spain building">
+						<figcaption>
+							<div>
+								<h3>The City</h3>
+								<p class="desc_news">View project</p>
+							</div>
+						</figcaption>
+					</figure>
+				</a> <a class="project" href="#">
+					<figure>
+						<img src="css/images/02.jpg" alt="a Kiwi, lime, pear"
+							title="Juicy Fruit">
+						<figcaption>
+							<div>
+								<h3>Juicy Fruit</h3>
+								<p class="desc_news">View project</p>
+							</div>
+						</figcaption>
+					</figure>
+				</a> <a class="project" href="#">
+					<figure>
+						<img src="css/images/04.jpg" alt="Yellow roller coaster track"
+							title="Roller Track">
+						<figcaption>
+							<div>
+								<h3>Roller Track</h3>
+								<p class="desc_news">View project</p>
+							</div>
+						</figcaption>
+					</figure>
+				</a> <a class="project" href="#">
+					<figure>
+						<img src="css/images/05.jpg" alt="Yellow play balls"
+							title="Yellow">
+						<figcaption>
+							<div>
+								<h3>Yellow</h3>
+								<p class="desc_news">View project</p>
+							</div>
+						</figcaption>
+					</figure>
+				</a>
 			</div>
+		</div>
 	</div>
-	
-	
+
+	<div id="contact">
+		<div id="titlecontainer">
+			<div id="title">Contacts</div>
+		</div>
+		<div class="box">
+			<div class="box_sx">
+				<div class="innerbox_dx">
+					<h2>Informazioni</h2>
+					<p class="info">Per qualsiasi informazione, siamo reperibili ai
+						seguenti recapiti:</p>
+					<div class="contact">
+						<p class="strong">
+							<i class="fa fa-phone"> </i> +39 331 872 9868
+						</p>
+						<p class="strong">
+							<i class="fa fa-envelope-o"> </i> v.pentangelo4@studenti.unisa.it
+						</p>
+						<p class="strong">
+							<i class="fa fa-map-marker"> </i> Somma Vesuviana, bocca del
+							vesuvio (NA)
+						</p>
+					</div>
+					<h2>Orari</h2>
+					<p class="info">
+						<b>Lunedì - Venerdì</b> 17:00 - 00:00
+					</p>
+					<p class="info">
+						<b>Sabato</b> 18:00 - 02:00
+					</p>
+					<p class="info">
+						<b>Domenica</b> 12:00 - 15:00 18:00 - 00:00
+					</p>
+				</div>
+			</div>
+			<div class="box_dx">
+				<div id="google-maps">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6625.405687820863!2d14.40151002901647!3d40.89585125930813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bafb0d7a5f879%3A0x950861277aca3f18!2s80049%20Somma%20Vesuviana%20NA!5e0!3m2!1sit!2sit!4v1593024221562!5m2!1sit!2sit"
+						style="border: 0;" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- FOOTER -->
 	<div class="footer">
-  		<div class="iconsbox">
-  			<a href="https://www.facebook.com/dinfunisa" target="_blank"> 
-  				<span class="fa fa-facebook">
-  				</span>
-  			</a>
-  			<a href="https://www.instagram.com/dinfunisa/" target="_blank"> 
-  				<span class="fa fa-instagram">
-  				</span>
-  			</a>
-  			<a href="https://www.youtube.com/watch?v=Ds6sDzuCqbQ" target="_blank"> 
-  				<span class="fa fa-youtube">
-  				</span>
-  			</a>
-  		</div>
-  		<div id="names_box">
-  			<div id="mark"> Tazty&copy;
-  			</div>
-  			<div class="names"> Alessio Casolaro<br> Viviana Pentangelo <br> Gianmirko Voria
-  			</div>
-  		</div>
+		<div class="iconsbox">
+			<a href="https://www.facebook.com/dinfunisa" target="_blank"> <span
+				class="fa fa-facebook"> </span>
+			</a> <a href="https://www.instagram.com/dinfunisa/" target="_blank">
+				<span class="fa fa-instagram"> </span>
+			</a> <a href="https://www.youtube.com/watch?v=Ds6sDzuCqbQ"
+				target="_blank"> <span class="fa fa-youtube"> </span>
+			</a>
+		</div>
+		<div id="names_box">
+			<div id="mark">Tazty&copy;</div>
+			<div class="names">
+				Alessio Casolaro<br> Viviana Pentangelo <br> Gianmirko
+				Voria
+			</div>
+		</div>
 
-	</div>	
+	</div>
 
 	<script>
-	// When the user scrolls the page, execute myFunction
-	window.onscroll = function() {myFunction()};
+		// When the user scrolls the page, execute myFunction
+		window.onscroll = function() {
+			myFunction()
+		};
 
-	// Get the navbar
-	var navbar = document.getElementById("navbar");
+		// Get the navbar
+		var navbar = document.getElementById("navbar");
+		var logo = document.getElementById("logo");
+		// Get the offset position of the navbar
+		var sticky = navbar.offsetTop;
 
-	// Get the offset position of the navbar
-	var sticky = navbar.offsetTop;
-
-	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-	function myFunction() {
-	  if (window.pageYOffset >= sticky) {
-	    navbar.classList.add("sticky")
-	  } else {
-	    navbar.classList.remove("sticky");
-	  }
-	}
-	
-	function homeselected(){
-		var home = document.getElementById("home");
-		home.classList.add("selected");
-	}
+		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+			if (window.pageYOffset >= sticky) {
+				logo.style.display = "none";
+				navbar.classList.add("sticky");
+			} else {
+				navbar.classList.remove("sticky");
+				logo.style.display = "flex";
+			}
+		}
+		
+		$(document).ready(function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
+		    $.get("/News", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+		        var $table = $("<table>").appendTo($("#names")); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
+		        $.each(responseJson, function(index, news) {    // Iterate over the JSON array.
+		            $("<tr>").appendTo($table)                     // Create HTML <tr> element, set its text content with currently iterated item and append it to the <table>.
+		                .append($("<td>").text(news.codice_notizia))        // Create HTML <td> element, set its text content with id of currently iterated product and append it to the <tr>.
+		                .append($("<td>").text(news.titolo))      // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+		                .append($("<td>").text(news.corpo));    // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
+		        });
+		    });
+		});
 	</script>
 </body>
 </html>
