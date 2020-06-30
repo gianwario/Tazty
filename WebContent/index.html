@@ -18,9 +18,15 @@
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
 	onload="currentSlide(1);">
-
-	<div id="navbar" class="sticky">
-		<a href="#">Home</a> <a href="#news">News</a> <a href="#contact">Contact</a> <a href="#gallery">Gallery</a>
+	<div id="logo">
+		<img src="logo2.png" alt="logo" style="height:12%;width:12%;"> 
+	</div>
+	<div id="navbar">
+		
+		<a href="#" onClick="homeselected()">Home</a> 
+		<a href="#news">News</a> 
+		<a href="#contact">Contact</a> 
+		<a href="#gallery">Gallery</a>
 	</div>
 	
 	
@@ -40,11 +46,6 @@
 	
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
 				onclick="plusSlides(1)">&#10095;</a>
-			<div style="text-align: center">
-				<span class="dot" onclick="currentSlide(1)"></span> <span class="dot"
-					onclick="currentSlide(2)"></span> <span class="dot"
-					onclick="currentSlide(3)"></span>
-			</div>
 		</div>
 		<div class="mainpanel">
 			<div class="text">L'Hamburgeria dove sei tu lo Chef!</div>
@@ -175,5 +176,29 @@
 	
 
 
+	<script>
+	// When the user scrolls the page, execute myFunction
+	window.onscroll = function() {myFunction()};
+
+	// Get the navbar
+	var navbar = document.getElementById("navbar");
+
+	// Get the offset position of the navbar
+	var sticky = navbar.offsetTop;
+
+	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
+	
+	function homeselected(){
+		var home = document.getElementById("home");
+		home.classList.add("selected");
+	}
+	</script>
 </body>
 </html>

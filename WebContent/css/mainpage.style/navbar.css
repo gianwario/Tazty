@@ -1,11 +1,8 @@
-#logo-container {
-	display:flex;
-	flex-direction: row;
-}
-
 
 #navbar {
-	height: 10%;
+	position:fixed;
+	width: 100%;
+	min-height: 9%;
 	background-color : rgb(73, 71, 67, 0.8);
   	overflow: hidden;
   	display: flex;
@@ -32,4 +29,9 @@
  	position: fixed;
   	top: 0;
   	width: 100%;
+}
+
+.selected {
+	background-color : white;
+	color: black;
 }
