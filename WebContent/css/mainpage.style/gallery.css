@@ -1,0 +1,97 @@
+body{  
+	background: #f2f2f2;
+}
+.gallery-div {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top:100px;
+  margin-left:10%;
+  margin-right:10%;
+}
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: 100%;
+}
+h2 {
+  
+  text-align:center;
+  font-size:40px;
+  color:#ffd801;
+}
+
+p{
+	color:#494743;
+	text-align:center;
+	margin-bottom: 2%;
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.separator{
+	height: 2px;
+	width: 4%;
+	background-color: #76d6de;
+	text-align: center;
+	margin: 2px auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+
+/* hover styles */
+.article-box {
+  position: relative;
+}
+
+.article-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.article-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.article-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 30%;/* Altezza blur*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  color: white;
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-box:hover .article-title {
+  opacity: 1;
+}
+
+.article-box:hover .article-image img {
+  filter: blur(2px);
+}
+
+
+/* for touch screen devices */
+@media (hover: none) { 
+  .article-title {
+    opacity: 1;
+  }
+  .article-image img {
+    filter: blur(2px);
+  }
+}
