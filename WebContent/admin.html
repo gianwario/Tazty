@@ -33,13 +33,14 @@
     		<h2>Info admin</h2>
     		<p>Informazioni admin qui</p>
   		</div>
-	<div class="pulsante_container">
-  		<button onclick="hideandshow('hidden_element_panino')" class="pulsante">Aggiungi Panino</button>
-  		<button onclick="hideandshow('hidden_element_bibita')" class="pulsante">Aggiungi Bibita</button>
-  		<button onclick="hideandshow('hidden_element_stuzzicheria')" class="pulsante">Aggiungi Stuzzicheria</button>
-  	</div>
+	
   
   		<div class="column right">
+  			<div class="pulsante_container">
+  				<button onclick="hideandshow('hidden_element_panino')" class="pulsante">Aggiungi Panino</button>
+  				<button onclick="hideandshow('hidden_element_bibita')" class="pulsante">Aggiungi Birra</button>
+  				<button onclick="hideandshow('hidden_element_stuzzicheria')" class="pulsante">Aggiungi Stuzzicheria</button>
+  			</div>
     		<fieldset id="hidden_element_panino" style="display:none">
   				<legend>Aggiungi panino al menu</legend>
   				<form class="form" onsubmit="index.html">
@@ -73,7 +74,7 @@
 			</fieldset>
 			
 			<fieldset id="hidden_element_bibita" style="display:none">
-  				<legend>Aggiungi bibita al menu</legend>
+  				<legend>Aggiungi birra al menu</legend>
   				<form class="form" onsubmit="index.html">
        				<div class="inputfield">
           				<label>Nome</label>
@@ -91,12 +92,22 @@
        				</div>
        				
        				<div class="inputfield">
-          				<label>Tipo pane</label>
-						<select class="custom_select" name="tipo_pane" id="tipo_pane">
-  							<option value="Classico">Classico</option>
-  							<option value="Integrale">Integrale</option>
+          				<label>Gradi</label>
+          				<input type="number" class="input" id="gradi" required>
+       				</div>
+       				
+       				<div class="inputfield">
+          				<label>Colore</label>
+						<select class="custom_select" name="tipo_pane" id="colore">
+  							<option value="chiare">Chiare</option>
+  							<option value="rosse">Rosse</option>
+  							<option value="scure">Scure</option>
 						</select> 
        				</div>
+       				
+       				<div class="inputfield">
+        				<input type="submit" value="invia" class="pulsante" >
+     	 			</div>
        			</form>
 			</fieldset>
 			
@@ -119,12 +130,17 @@
        				</div>
        				
        				<div class="inputfield">
-          				<label>Tipo pane</label>
-						<select class="custom_select" name="tipo_pane" id="tipo_pane">
-  							<option value="Classico">Classico</option>
-  							<option value="Integrale">Integrale</option>
+          				<label>Tipo</label>
+						<select class="custom_select" name="tipo" id="tipo">
+  							<option value="antipasto">Antipasto</option>
+  							<option value="aperitivo">Aperitivo</option>
+  							<option value="sfizi">Sfizi</option>
 						</select> 
        				</div>
+       				
+       				<div class="inputfield">
+        				<input type="submit" value="invia" class="pulsante" >
+     	 			</div>
        			</form>
 			</fieldset>
   		</div>
