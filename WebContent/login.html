@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Registrati</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<script src="js/slide.js"></script>
@@ -17,7 +17,7 @@
 <body>
 <div class="wrapper">
 	<div class="logo_reg">
-		<img src="logo2.png" alt="logo" style="height:40%;width:40%;"> 
+		<img src="logo2.png" alt="logo" style="height:40%;width:75%;"> 
 	</div>
     
     <form class="form" onsubmit="index.html">
@@ -27,50 +27,16 @@
        </div> 
        
        <div class="inputfield">
-          <label>Nome</label>
-          <input type="text" class="input" id="nome" required>
-       </div>  
-       
-        <div class="inputfield">
-          <label>Cognome</label>
-          <input type="text" class="input" id="cognome" required>
-       </div>
-
-       <div class="inputfield">
           <label>Password</label>
           <input type="password" class="input" id="password" required>
        </div>  
        
-       <div class="inputfield">
-          <label>Email</label>
-          <input type="email" class="input" id="email" required>
-       </div>  
-      
-      
-      <div class="inputfield">
-          <label>Indirizzo</label>
-          <input type="text" class="input" id="indirizzo" required>
+       <div class="redirect">
+          <a href="register.html">Non ti sei ancora registrato? Registrati subito.</a>
        </div> 
        
       <div class="inputfield">
-          <label>Cellulare</label>
-          <input type="number" class="input" id="indirizzo" required>
-       </div> 
-      
-      <div class="inputfield terms">
-          <label class="check">
-            <input type="checkbox" required>
-            <span class="checkmark"></span>
-          </label>
-          <p>Acconsento al trattamento dei miei dati personali.</p>
-       </div> 
-       
-        <div class="redirect">
-          <a href="login.html">Ti sei giá registrato? Accedi subito.</a>
-       </div> 
-       
-      <div class="inputfield">
-        <input type="submit" value="Registrati" class="btn" >
+        <input type="submit" value="Login" class="btn" >
       </div>
     </form>
 </div>

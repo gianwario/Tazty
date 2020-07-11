@@ -41,7 +41,22 @@ body{
   width: 100%;
 }
 
-.wrapper .form .inputfield{
+.redirect a{
+	text-decoration:none;
+	font-size:14px;
+	text-align:center;
+}
+
+.redirect a:link, .redirect a:visited{
+  color:#76e6de;
+}
+
+.redirect a:hover{
+	color:#84b1ad;
+}
+
+
+.wrapper .form .inputfield,.redirect{
   margin-bottom: 15px;
   display: flex;
   align-items: center;
