@@ -5,7 +5,9 @@
 	<title>Registrati</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="js/slide.js"></script>
+	<script src="js/validationform.js"></script>
 	<link rel="stylesheet" href="css/mainpage.style/slide.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
@@ -20,41 +22,42 @@
 		<img src="logo2.png" alt="logo" style="height:40%;width:40%;"> 
 	</div>
     
-    <form class="form" onsubmit="index.html">
+    <form class="form" name="registration" onSubmit="return formValidation();">
        <div class="inputfield">
           <label>Username</label>
-          <input type="text" class="input" id="username" required>
+          <input type="text" class="input" name="username" required>
        </div> 
        
        <div class="inputfield">
           <label>Nome</label>
-          <input type="text" class="input" id="nome" required>
+          <input type="text" class="input" name="nome" required>
        </div>  
        
         <div class="inputfield">
           <label>Cognome</label>
-          <input type="text" class="input" id="cognome" required>
+          <input type="text" class="input" name="cognome" required>
        </div>
 
        <div class="inputfield">
           <label>Password</label>
-          <input type="password" class="input" id="password" required>
+          <input type="password" class="input" name="password" id="password" required>
+          <div id="errorepass" class="hidden">Errore password</div>
        </div>  
        
        <div class="inputfield">
           <label>Email</label>
-          <input type="email" class="input" id="email" required>
+          <input type="email" class="input" name="email" id="email" required>
        </div>  
       
       
       <div class="inputfield">
           <label>Indirizzo</label>
-          <input type="text" class="input" id="indirizzo" required>
+          <input type="text" class="input" name="indirizzo" required>
        </div> 
        
       <div class="inputfield">
           <label>Cellulare</label>
-          <input type="number" class="input" id="indirizzo" required>
+          <input type="number" class="input" name="indirizzo" required>
        </div> 
       
       <div class="inputfield terms">

@@ -9,22 +9,42 @@
 .column {
   float: left;
   padding: 10px;
-  height: 100vh;
+  display: table;
 }
 
 /* Left column */
-.column.left {
+.column_left {
   width: 20%;
   background-color:#76e6de;
+  text-align:center;
+  display: table-cell;
+}
+
+.utente{
+	color:white;
+	padding-bottom:10%;
+	text-transform:uppercase;
+}
+
+.info{
+	color:white;
+	padding-bottom:10%;
+}
+
+.info_admin{
+	margin-top:20%;
 }
 
 /* Right column */
-.column.right {
+.column_right {
   	width: 80%;
+  	display: table-cell;
 }
 
 .row{
 	padding-top:3.5%;
+	display: table;
+  	width: 100%;
 }
 
 /* Clear floats after the columns */
@@ -47,9 +67,10 @@ fieldset{
     border-radius:3px;
     opacity: 1;
   	transition: opacity 1s;
-  	margin-top:2%;
-  	width:70%;
+  	margin-top:1%;
+  	margin-bottom:2%;
   	margin-left: 15%;
+  	width:70%;
 }
 
 .inputfield{
@@ -58,21 +79,21 @@ fieldset{
 	align-items: center;
 }
 
-.column.right .form .inputfield,.redirect{
+.column_right .form .inputfield,.redirect{
   margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
-.column.right .form .inputfield label{
+.column_right .form .inputfield label{
    width: 200px;
    color: #757575;
    margin-right: 10px;
   font-size: 16px;
 }
 
-.column.right .form .inputfield .input,
-.column.right .form .inputfield .textarea{
+.column_right .form .inputfield .input,
+.column_right .form .inputfield .textarea{
   width: 100%;
   outline: none;
   border: 1px solid #494743;
@@ -82,13 +103,13 @@ fieldset{
   transition: all 0.3s ease;
 }
 
-.column.right .form .inputfield .textarea{
+.column_right .form .inputfield .textarea{
   width: 100%;
   height: 125px;
   resize: none;
 }
 
-.column.right .form .inputfield .custom_select{
+.column_right .form .inputfield .custom_select{
   position: relative;
   width: 100%;
   height: 37px;
@@ -117,37 +138,37 @@ outline:none;
 }
 
 
-.column.right .form .inputfield .input:focus,
-.column.right .form .inputfield .textarea:focus,
+.column_right .form .inputfield .input:focus,
+.column_right .form .inputfield .textarea:focus,
 .custom_select:focus{
   border: 1px solid #fec107;
 }
 
-.column.right .form .inputfield p{
+.column_right .form .inputfield p{
    font-size: 14px;
    color: #757575;
 }
-.column.right .form .inputfield .check{
+.column_right .form .inputfield .check{
   width: 15px;
   height: 15px;
   position: relative;
   display: block;
   cursor: pointer;
 }
-.column.right .form .inputfield .check input[type="checkbox"]{
+.column_right .form .inputfield .check input[type="checkbox"]{
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-.column.right .form .inputfield .check .checkmark{
+.column_right .form .inputfield .check .checkmark{
   width: 15px;
   height: 15px;
   border: 1px solid #fec107;
   display: block;
   position: relative;
 }
-.column.right .form .inputfield .check .checkmark:before{
+.column_right .form .inputfield .check .checkmark:before{
   content: "";
   position: absolute;
   top: 1px;
@@ -159,15 +180,15 @@ outline:none;
   transform: rotate(-45deg);
   display: none;
 }
-.column.right .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+.column_right .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
   background: #fec107;
 }
 
-.column.right .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+.column_right .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
   display: block;
 }
 
-.column.right .form .inputfield .btn{
+.column_right .form .inputfield .btn{
   width: 100%;
   padding: 8px 10px;
   font-size: 18px; 
@@ -204,30 +225,39 @@ outline:none;
 	justify-content: center;
 }
 
-.column.right .form .inputfield .btn:hover{
+.column_right .form .inputfield .btn:hover{
   background: #ffd658;
 }
 
-.column.right .form .inputfield:last-child{
+.column_right .form .inputfield:last-child{
   margin-bottom: 0;
 }
 
 @media (max-width:420px) {
-  .column.right .form .inputfield{
+  .column_right .form .inputfield{
     flex-direction: column;
     align-items: flex-start;
   }
-  .column.right .form .inputfield label{
+  .column_right .form .inputfield label{
     margin-bottom: 5px;
   }
-  .column.right .form .inputfield.terms{
+  .column_right .form .inputfield.terms{
     flex-direction: row;
   }
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column.left, .column.right {
-    width: 100%;
+  .column_left, .column_right {
+    	width: 100%;
+  }
+  .row,.column_left,.column_right{
+  		display:block;
+  }
+  .pulsante{
+  		font-size:13px;
   }
 }
+
+
+

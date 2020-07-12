@@ -199,3 +199,30 @@ body{
     flex-direction: row;
   }
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#errorepass {
+  background-color: yellow;
+  padding:2px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: inline;
+}
+
