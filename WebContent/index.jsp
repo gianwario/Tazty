@@ -1,3 +1,9 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="model.*"%>
+
 <!doctype html>
 <html>
 
@@ -32,36 +38,43 @@
 </head>
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
-	onload="currentSlide(1);">
+	onload="slide();">
 	<div id="logo">
-		<img src="logo2.png" alt="logo" style="height: 12%; width: 12%;">
+		<img src="images/logo2.png" alt="logo" style="height: 12%; width: 12%;">
 	</div>
 	<div id="navbar">
 
 		<a href="#">Home</a> <a href="#news">News</a> <a href="#contact">Contacts</a>
 		<a href="gallery.html">Gallery</a>
+		<a href="login.html">pisello</a>
 	</div>
 
 
 	<div id="home">
 		<div class="slideshow-container">
 			<div class="mySlides fade">
-				<img src="css/images/Slide1.jpg" style="width: 100%">
+				<img src="images/Slide1.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides fade">
-				<img src="css/images/Slide2.jpg" style="width: 100%">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="css/images/slide3.jpg" style="width: 100%">
+				<img src="images/Slide2.jpg" style="width: 100%">
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
 				onclick="plusSlides(1)">&#10095;</a>
 		</div>
 		<div class="mainpanel">
-			<div class="text">L'Hamburgeria dove sei tu lo Chef!</div>
+			<div class="text">L'Hamburgeria dove sei tu lo Chef!
+			<div> Benvenuto signor
+		 		<%	
+		 			if(request.getSession().getAttribute("utente")!=null)
+		 			{
+		 				UserBean u = (UserBean)request.getSession().getAttribute("utente"); %>
+		 		<%= u.getNome() %> <%= u.getCognome() %>
+		 		<%	} %>
+		 		
+			</div>
+			</div>
 			<div class="div-button-slide-menu">
 				<button class="button-slide-menu">Menu</button>
 			</div>
@@ -83,7 +96,7 @@
 			<div class="news-container">
 				<a class="project" href="#">
 					<figure>
-						<img src="css/images/01.jpg" alt="Spain building">
+						<img src="images/01.jpg" alt="Spain building">
 						<figcaption>
 							<div>
 								<h3>The City</h3>
@@ -93,7 +106,7 @@
 					</figure>
 				</a> <a class="project" href="#">
 					<figure>
-						<img src="css/images/02.jpg" alt="a Kiwi, lime, pear"
+						<img src="images/02.jpg" alt="a Kiwi, lime, pear"
 							title="Juicy Fruit">
 						<figcaption>
 							<div>
@@ -104,7 +117,7 @@
 					</figure>
 				</a> <a class="project" href="#">
 					<figure>
-						<img src="css/images/04.jpg" alt="Yellow roller coaster track"
+						<img src="images/04.jpg" alt="Yellow roller coaster track"
 							title="Roller Track">
 						<figcaption>
 							<div>
@@ -115,7 +128,7 @@
 					</figure>
 				</a> <a class="project" href="#">
 					<figure>
-						<img src="css/images/05.jpg" alt="Yellow play balls"
+						<img src="images/05.jpg" alt="Yellow play balls"
 							title="Yellow">
 						<figcaption>
 							<div>
@@ -153,7 +166,7 @@
 					</div>
 					<h2>Orari</h2>
 					<p class="info">
-						<b>Lunedì - Venerdì</b> 17:00 - 00:00
+						<b>LunedÃ¬ - VenerdÃ¬</b> 17:00 - 00:00
 					</p>
 					<p class="info">
 						<b>Sabato</b> 18:00 - 02:00

@@ -41,7 +41,22 @@ body{
   width: 100%;
 }
 
-.wrapper .form .inputfield{
+.redirect a{
+	text-decoration:none;
+	font-size:14px;
+	text-align:center;
+}
+
+.redirect a:link, .redirect a:visited{
+  color:#76e6de;
+}
+
+.redirect a:hover{
+	color:#84b1ad;
+}
+
+
+.wrapper .form .inputfield,.redirect{
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -184,3 +199,29 @@ body{
     flex-direction: row;
   }
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.hidden {
+  display:none!important;
+  width:100%;
+}
+
+.errore{
+  color:red;
+  width:100%;
+  padding-bottom:3%;
+  font-size: 13px;
+}
+

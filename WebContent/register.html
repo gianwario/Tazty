@@ -2,14 +2,16 @@
 <html>
 
 <head>
-	<title>Prova</title>
+	<title>Registrati</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="js/slide.js"></script>
+	<script src="js/validationform.js"></script>
 	<link rel="stylesheet" href="css/mainpage.style/slide.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
-	<link rel="stylesheet" href="css/mainpage.style/register.css" type="text/css">
+	<link rel="stylesheet" href="css/user.style/register.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -17,52 +19,65 @@
 <body>
 <div class="wrapper">
 	<div class="logo_reg">
-		<img src="logo2.png" alt="logo" style="height:40%;width:40%;"> 
+		<img src="images/logo2.png" alt="logo" style="height:40%;width:40%;"> 
 	</div>
     
-    <form class="form" onsubmit="index.html">
+    <form class="form" name="registration" onSubmit="return formValidation();">
        <div class="inputfield">
           <label>Username</label>
-          <input type="text" class="input" id="username" required>
+          <input type="text" class="input" name="username" required>
        </div> 
        
        <div class="inputfield">
           <label>Nome</label>
-          <input type="text" class="input" id="nome" required>
+          <input type="text" class="input" name="nome" required>
        </div>  
        
         <div class="inputfield">
           <label>Cognome</label>
-          <input type="text" class="input" id="cognome" required>
+          <input type="text" class="input" name="cognome" required>
        </div>
 
        <div class="inputfield">
           <label>Password</label>
-          <input type="password" class="input" id="password" required>
-       </div>  
+          <input type="password" class="input" name="password" id="password" required>
+       </div>
+       <div class="hidden errore" id="errorepass">
+       		<div>Inserisci almeno un carattere maiuscolo, uno minuscolo, un numero e un carattere speciale.</div>
+       </div>
        
        <div class="inputfield">
           <label>Email</label>
-          <input type="email" class="input" id="email" required>
-       </div>  
+          <input type="email" class="input" name="email" id="email" required>
+       </div>
+       <div class="hidden errore" id="erroreemail">
+       		<div>Inserisci un'email del tipo "email@email.it"</div>
+       </div> 
       
       
       <div class="inputfield">
           <label>Indirizzo</label>
-          <input type="text" class="input" id="indirizzo" required>
+          <input type="text" class="input" name="indirizzo" required>
        </div> 
        
       <div class="inputfield">
           <label>Cellulare</label>
-          <input type="number" class="input" id="indirizzo" required>
-       </div> 
-    
+          <input type="tel" class="input" name="phone" id="phone" required>
+       </div>
+       <div class="hidden errore" id="errorephone">
+       		<div>Inserisci un numero di telefono del tipo "+393311234567; 3311234567"</div>
+       </div>  
+
       <div class="inputfield terms">
           <label class="check">
             <input type="checkbox" required>
             <span class="checkmark"></span>
           </label>
           <p>Acconsento al trattamento dei miei dati personali.</p>
+       </div> 
+       
+        <div class="redirect">
+          <a href="login.html">Ti sei giá registrato? Accedi subito.</a>
        </div> 
        
       <div class="inputfield">
