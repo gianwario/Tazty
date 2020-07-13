@@ -1,0 +1,37 @@
+@font-face {
+	font-family: cracked-narrow;
+	src: url("../font/Cracked-Narrow.ttf");
+	font-weight: 200;
+}
+
+#instruction_container {	
+}
+
+#pic_container {
+	height: 150px;
+	width: 100%;
+}
+
+#icons_container {
+	
+	background-color: #494743;
+	display: flex;
+	justify-content: space-around;
+}
+@media only screen and (max-width: 1000px) {
+	
+	#icons_container { 
+		flex-direction: column;
+		display: flex;
+	}
+}
+#icons_container img {
+	height: 230px;
+	width: 300px;
+}
+
+h1 {
+	font-family: cracked-narrow;
+	color: white;
+	font-size: 80px;
+}

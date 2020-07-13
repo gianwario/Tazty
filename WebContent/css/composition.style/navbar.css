@@ -1,0 +1,47 @@
+
+	#navbar {
+	margin-top: -1%;
+	position:fixed;
+	width: 100%;
+	min-height: 9%;
+	background-color : rgb(73, 71, 67, 0.8);
+  	overflow: hidden;
+  	display: flex;
+ 	flex-direction:row;
+  	justify-content: center;
+  	align-items: center;
+  	z-index:11;
+}	
+
+
+@media screen and (min-width: 780px){
+
+	
+#navbar a {
+	font-family: 'Open Sans', sans-serif;
+  	display: block;
+  	color: #f6f6f6;
+  	text-align: center;
+  	margin-top: 1%;
+  	padding: 10px 30px;
+  	text-decoration: none;
+  	font-size: 36px;
+}
+
+#navbar a:hover {
+  	color: #ffd801;
+}
+	
+}
+
+.sticky {
+ 	position: fixed;
+ 	margin-top:10%;
+  	top: 0px;
+  	width: 100%;
+}
+
+.selected {
+	background-color : white;
+	color: black;
+}
