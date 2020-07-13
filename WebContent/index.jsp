@@ -1,3 +1,9 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="model.*"%>
+
 <!doctype html>
 <html>
 
@@ -33,6 +39,8 @@
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
 	onload="currentSlide(1);">
+	
+	
 	<div id="logo">
 		<img src="images/logo2.png" alt="logo" style="height: 12%; width: 12%;">
 	</div>
@@ -40,6 +48,7 @@
 
 		<a href="#">Home</a> <a href="#news">News</a> <a href="#contact">Contacts</a>
 		<a href="gallery.html">Gallery</a>
+		<a href="login.html">pisello</a>
 	</div>
 
 
@@ -61,7 +70,12 @@
 				onclick="plusSlides(1)">&#10095;</a>
 		</div>
 		<div class="mainpanel">
-			<div class="text">L'Hamburgeria dove sei tu lo Chef!</div>
+			<div class="text">L'Hamburgeria dove sei tu lo Chef!
+			<div> Benvenuto signor
+		 		<%UserBean u = (UserBean)request.getSession().getAttribute("utente"); %>
+		 		<%= u.getNome() %> <%= u.getCognome() %>
+			</div>
+			</div>
 			<div class="div-button-slide-menu">
 				<button class="button-slide-menu">Menu</button>
 			</div>
@@ -153,7 +167,7 @@
 					</div>
 					<h2>Orari</h2>
 					<p class="info">
-						<b>Lunedì - Venerdì</b> 17:00 - 00:00
+						<b>LunedÃ¬ - VenerdÃ¬</b> 17:00 - 00:00
 					</p>
 					<p class="info">
 						<b>Sabato</b> 18:00 - 02:00
