@@ -166,7 +166,7 @@
 					</div>
 					<h2>Orari</h2>
 					<p class="info">
-						<b>LunedÃ¬ - VenerdÃ¬</b> 17:00 - 00:00
+						<b>Lunedi - Venerdi</b> 17:00 - 00:00
 					</p>
 					<p class="info">
 						<b>Sabato</b> 18:00 - 02:00

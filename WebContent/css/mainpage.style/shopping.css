@@ -1,0 +1,214 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.nav{
+	background-color:black;
+}
+
+/* Left column */
+.column_left {
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #76e6de;
+}
+
+/* Right column */
+.column_right {
+	width: 80%;
+	margin-left: 20%;
+}
+
+.griglia {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	padding: 10px;
+}
+
+.titolo {
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 30px;
+	margin-top: 2%;
+	text-align: center;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.nome_prodotto {
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 24px;
+	margin-bottom: 10%;
+	margin-top: 2%;
+}
+
+.descrizione {
+	padding-bottom: 5%;
+}
+
+.prezzo {
+	color: #ffd801;
+	font-size: 22px;
+	padding-bottom: 5%;
+}
+
+.carrellobutton {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+.carrellobutton:hover {
+	opacity: 0.7;
+}
+
+.custom_select:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	border: 8px solid;
+	border-color: #494743 transparent transparent transparent;
+	pointer-events: none;
+}
+
+.custom_select {
+	outline: none;
+	width: 70%;
+	height: 100%;
+	border: 0px;
+	padding: 8px 10px;
+	font-size: 15px;
+	border: 1px solid #494743;
+	border-radius: 3px;
+}
+
+.custom_select:focus {
+	border: 1px solid #fec107;
+}
+
+.custom_select {
+	outline: none;
+	width: 70%;
+	height: 100%;
+	border: 0px;
+	padding: 8px 10px;
+	font-size: 15px;
+	border: 1px solid #494743;
+	border-radius: 3px;
+}
+
+.search_input {
+	width: 70%;
+	outline: none;
+	border: 1px solid #494743;
+	font-size: 15px;
+	padding: 8px 10px;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.select_div {
+	margin-bottom: 5%;
+	margin-top: 5%;
+	text-align: center;
+}
+
+.search {
+	width: 100%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	width: 40%;
+	border: 3px solid #76e6de;
+	border-right: none;
+	padding: 5px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color: gray;
+	height: 45px;
+}
+
+.searchTerm:focus {
+	color: #76e6de;
+}
+
+.searchButton {
+	width: 40px;
+	height: 45px;
+	border: 1px solid #76e6de;
+	background: #76e6de;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+	width: 75%;
+	position: relative;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	margin-top: 5%;
+}
+
+.testo {
+	color: white;
+	text-align: center;
+}
+
+.home_redirect {
+	text-align: center;
+}
+
+.pulsante {
+	padding: 8px 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	border: 0px;
+	background: #fec107;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+	outline: none;
+	margin: 2%;
+	height: 8%;
+	width: 22%;
+}
+
+.pulsante:hover {
+	background: #ffd658;
+}
+
+.pulsante_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
