@@ -214,15 +214,14 @@ body{
 }
 
 .hidden {
-  visibility: hidden;
+  display:none!important;
+  width:100%;
 }
 
-#errorepass {
-  background-color: yellow;
-  padding:2px;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid gray;
-  display: inline;
+.errore{
+  color:red;
+  width:100%;
+  padding-bottom:3%;
+  font-size: 13px;
 }
 
