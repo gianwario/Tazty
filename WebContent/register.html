@@ -19,7 +19,7 @@
 <body>
 <div class="wrapper">
 	<div class="logo_reg">
-		<img src="logo2.png" alt="logo" style="height:40%;width:40%;"> 
+		<img src="images/logo2.png" alt="logo" style="height:40%;width:40%;"> 
 	</div>
     
     <form class="form" name="registration" onSubmit="return formValidation();">
@@ -41,13 +41,18 @@
        <div class="inputfield">
           <label>Password</label>
           <input type="password" class="input" name="password" id="password" required>
-          <div id="errorepass" class="hidden">Errore password</div>
-       </div>  
+       </div>
+       <div class="hidden errore" id="errorepass">
+       		<div>Inserisci almeno un carattere maiuscolo, uno minuscolo, un numero e un carattere speciale.</div>
+       </div>
        
        <div class="inputfield">
           <label>Email</label>
           <input type="email" class="input" name="email" id="email" required>
-       </div>  
+       </div>
+       <div class="hidden errore" id="erroreemail">
+       		<div>Inserisci un'email del tipo "email@email.it"</div>
+       </div> 
       
       
       <div class="inputfield">
@@ -57,9 +62,12 @@
        
       <div class="inputfield">
           <label>Cellulare</label>
-          <input type="number" class="input" name="indirizzo" required>
-       </div> 
-      
+          <input type="tel" class="input" name="phone" id="phone" required>
+       </div>
+       <div class="hidden errore" id="errorephone">
+       		<div>Inserisci un numero di telefono del tipo "+393311234567; 3311234567"</div>
+       </div>  
+
       <div class="inputfield terms">
           <label class="check">
             <input type="checkbox" required>

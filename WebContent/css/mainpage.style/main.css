@@ -29,6 +29,9 @@ html {
 	margin-top: 10%;
 }
 
+
+
+
 .text {
   margin-top: 20%;
   color: #f2f2f2;
@@ -107,4 +110,33 @@ html {
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+	.mainpanel{
+		height:auto;
+		width:auto;
+	}
+	
+	.text {
+  		margin-top: 55%;
+  		color:black;
+  		font-size: 30px;
+ 	}
+ 	
+ 	.button-slide-menu{
+ 		padding:8px 40px;
+ 	}
+ 	
+ 	.button-slide-componi{
+ 		padding:12px 40px;
+ 	}
+ 	
+ 	.box_sx{
+ 		width:auto!important;
+ 	}
+ 	
+ 	#title{
+ 		width:auto!important;
+ 	}
 }
