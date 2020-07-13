@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<script src="js/slide.js"></script>
-	<link rel="stylesheet" href="css/mainpage.style/admin.css" type="text/css">
+	<link rel="stylesheet" href="css/user.style/admin.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,22 +20,26 @@
 			    } else {
 			        x.style.display = 'none';
 			    }
+			    window.scrollTo(0,document.body.scrollHeight);
 		  }
 	</script>
 </head>
 <body>
-	<div id="navbar" class="sticky">
-		<a href="index.html#">Home</a> <a href="index.html#news">News</a> <a href="index.html#contact">Contact</a> <a href="#">Gallery</a>
-	</div>
 	
-	<div class="row">
-  		<div class="column_left">
-  			<div class="info_admin">
-  				<h1 class="utente">Nome admin</h1>
-  				<p class="info">Indirizzo admin</p>
-  				<p class="info">Email admin</p>
+		<div id="container">
+		
+	  		<div class="column_left">
+	  			<div id="home_redirect">
+	  				<a href="index.html" title="Ritorna alla home">
+	  					<img src="images/logo-scritta.png" alt="Torna alla home" width="40%">
+	  				</a>
+	  			</div>
+	  			<div class="info_admin">
+	  				<h1 class="utente">Nome admin</h1>
+	  				<p class="info">Indirizzo admin</p>
+	  				<p class="info">Email admin</p>
+	  			</div>
   			</div>
-  		</div>
 	
   
   		<div class="column_right">
@@ -147,7 +151,8 @@
        			</form>
 			</fieldset>
   		</div>
-  		
+  	
   	</div>
+
 </body>
 </html>

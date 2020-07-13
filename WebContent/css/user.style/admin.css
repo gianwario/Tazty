@@ -5,19 +5,26 @@
   margin:0px;
 }
 
-
-.column {
-  float: left;
-  padding: 10px;
-  display: table;
+#container{
+	width: 100%;
+	height:100%;
+	display: flex;
+	flex-direction:row;
 }
 
 /* Left column */
 .column_left {
-  width: 20%;
+  width: 25%;
+  height: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
   background-color:#76e6de;
   text-align:center;
-  display: table-cell;
+}
+
+#home_redirect{
+
 }
 
 .utente{
@@ -32,27 +39,15 @@
 }
 
 .info_admin{
-	margin-top:20%;
+	
 }
 
 /* Right column */
 .column_right {
-  	width: 80%;
-  	display: table-cell;
+  	width: 75%;
+  	margin-left: 25%;
 }
 
-.row{
-	padding-top:3.5%;
-	display: table;
-  	width: 100%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 legend { 
   display: block;
@@ -212,7 +207,8 @@ outline:none;
   border-radius: 3px;
   outline: none;
   margin:2%;
-  width: 20%;
+  height: 8%;
+  width: 22%;
 }
 
 .pulsante:hover{
@@ -248,10 +244,20 @@ outline:none;
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+  #container{
+  		flex-direction:column;
+  }
+  .column_right{
+  		margin-left: 0%;
+  }
+  .column_left{
+  		position: relative;
+  		margin-top: -10%;
+  }
   .column_left, .column_right {
     	width: 100%;
   }
-  .row,.column_left,.column_right{
+  .column_left,.column_right{
   		display:block;
   }
   .pulsante{
