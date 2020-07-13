@@ -66,8 +66,13 @@
 		<div class="mainpanel">
 			<div class="text">L'Hamburgeria dove sei tu lo Chef!
 			<div> Benvenuto signor
-		 		<%UserBean u = (UserBean)request.getSession().getAttribute("utente"); %>
+		 		<%	
+		 			if(request.getSession().getAttribute("utente")!=null)
+		 			{
+		 				UserBean u = (UserBean)request.getSession().getAttribute("utente"); %>
 		 		<%= u.getNome() %> <%= u.getCognome() %>
+		 		<%	} %>
+		 		
 			</div>
 			</div>
 			<div class="div-button-slide-menu">
