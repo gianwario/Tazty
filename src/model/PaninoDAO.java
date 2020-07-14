@@ -5,9 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDAO {
+public class PaninoDAO {
 	
-	public UserBean getUserByUsernameAndPassword (String u, String p) throws SQLException{
+	/*public UserBean getPaninoByName (String u, String p) throws SQLException{
 		try {
 			ConnectionPool cp = new ConnectionPool();
 			java.sql.Connection con = cp.getConnection();
@@ -34,8 +34,8 @@ public class UserDAO {
 		}
 		return null;	
 	}
-	
-	public void doSave(UserBean u) throws SQLException {
+	*/
+	public void doSave(PaninoBean u) throws SQLException {
 		ConnectionPool cp = new ConnectionPool();
 		java.sql.Connection con=null;
 		try {
@@ -44,28 +44,23 @@ public class UserDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		PreparedStatement ps = con.prepareStatement("insert into utente(username,nome,cognome,passw,email,indirizzo,cellulare,isAdmin) values (?,?,?,?,?,?,?,?);");
-		ps.setString(1, u.getUsername());
-		ps.setString(2, u.getNome());
-		ps.setString(3, u.getCognome());
-		ps.setString(4, u.getPassword());
-		ps.setString(5, u.getEmail());
-		ps.setString(6, u.getIndirizzo());
-		ps.setString(7, u.getCellulare());
-		ps.setInt(8,0);//ISADMIN
+		PreparedStatement ps = con.prepareStatement("insert into prodotto(nome,descrizione,prezzo) values (?,?,?);");
+		PreparedStatement select = con.prepareStatement("select cod_prodotto from prodotto where nome=?;");
+		PreparedStatement ps2 = con.prepareStatement("insert into panino(cod_prodotto,tipo_pane) values (?,?);");
+		
+		ps.setString(1, u.getNome());
+		ps.setString(2, u.getDescrizione());
+		ps.setDouble(3, u.getPrezzo());
 		ps.execute();
+		
+		select.setString(1, u.getNome());
+		ResultSet rs = select.executeQuery();
+		if(rs.next())
+			ps2.setInt(1,rs.getInt("cod_prodotto"));
+		ps2.setString(2, u.getTipo());
+		ps2.execute();
 	}
-	/*
-	public boolean exists(UtenteBean u) throws SQLException {
-		Connection con = null;
-		con = ConPool.getConnection();
-		PreparedStatement ps = con.prepareStatement("select email from utente where utente = ?;");
-		ps.setString(1, u.getUsername());
-		ResultSet rs = ps.executeQuery();
-		if(rs.next()) return true;
-		return false;
-	}*/
-	
+
 	public boolean check(String username) throws SQLException {
 		ConnectionPool cp = new ConnectionPool();
 		java.sql.Connection con=null;
