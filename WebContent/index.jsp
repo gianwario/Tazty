@@ -104,7 +104,7 @@
 			<div class="text">L'Hamburgeria dove sei tu lo Chef!
 			</div>
 			<div class="div-button-slide-menu">
-				<button class="button-slide-menu">Menu</button>
+				<a href="Menu" style="text-decoration: none" class="button-slide-menu">Menu</a>
 			</div>
 			<div class="div-button-slide-componi">
 				<a href="Composition" style="text-decoration: none" class="button-slide-componi">Componi il tuo panino</a>
