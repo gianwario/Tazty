@@ -42,13 +42,50 @@
 	<div id="logo">
 		<img src="images/logo2.png" alt="logo" style="height: 12%; width: 12%;">
 	</div>
+		
 	<div id="navbar">
-
-		<a href="#">Home</a> <a href="#news">News</a> <a href="#contact">Contacts</a>
-		<a href="gallery.html">Gallery</a>
-		<a href="login.html">pisello</a>
+		
+		<a class="nav-a" href="#">Home</a> <a class="nav-a" href="#news">News</a> <a class="nav-a" href="#contact">Contacts</a>
+		<a class="nav-a" href="gallery.html">Gallery</a>
+		 <div class="dropdown">
+  			<button onclick="myFunction()" class="dropbtn">
+				<span class="fa fa-user" id="user-icon"></span>
+				<span id="user-text">Area utente</span>
+				<span class="fa fa-caret-down" style="font-size:30px;padding-top: 2%;"></span>
+			</button>
+		  	<div id="myDropdown" class="dropdown-content">
+		  	<%	
+		 	if(request.getSession().getAttribute("utente")==null)
+		 	{
+		 	%>
+			    <a href="login.html">Login</a>
+			    <a href="register.html">Registrati</a>
+			<%	
+			} 
+		 	else 
+		 	{
+		 		UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
+			%>
+				<a id="logout" href="Logout">Logout</a>
+				<a href="#">Profilo</a>
+			<%
+				if(u.getIsadmin() == 1)
+				{
+			%>
+				<a href="admin.html">Pagina Admin</a>
+			<%
+			
+				}
+			}
+		  	%>
+		  	</div>
+		</div>
+		
+		
+		
 	</div>
-
+	
+	
 
 	<div id="home">
 		<div class="slideshow-container">
@@ -65,15 +102,6 @@
 		</div>
 		<div class="mainpanel">
 			<div class="text">L'Hamburgeria dove sei tu lo Chef!
-			<div> Benvenuto signor
-		 		<%	
-		 			if(request.getSession().getAttribute("utente")!=null)
-		 			{
-		 				UserBean u = (UserBean)request.getSession().getAttribute("utente"); %>
-		 		<%= u.getNome() %> <%= u.getCognome() %>
-		 		<%	} %>
-		 		
-			</div>
 			</div>
 			<div class="div-button-slide-menu">
 				<button class="button-slide-menu">Menu</button>
@@ -84,7 +112,7 @@
 		</div>
 	</div>
 
-
+		 		
 
 
 
@@ -230,18 +258,6 @@
 				logo.style.display = "flex";
 			}
 		}
-		
-		$(document).ready(function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
-		    $.get("/News", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
-		        var $table = $("<table>").appendTo($("#names")); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
-		        $.each(responseJson, function(index, news) {    // Iterate over the JSON array.
-		            $("<tr>").appendTo($table)                     // Create HTML <tr> element, set its text content with currently iterated item and append it to the <table>.
-		                .append($("<td>").text(news.codice_notizia))        // Create HTML <td> element, set its text content with id of currently iterated product and append it to the <tr>.
-		                .append($("<td>").text(news.titolo))      // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-		                .append($("<td>").text(news.corpo));    // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
-		        });
-		    });
-		});
 	</script>
 </body>
 </html>
