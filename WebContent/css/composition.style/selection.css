@@ -1,0 +1,74 @@
+@font-face {
+	font-family: cracked-narrow;
+	src: url("../font/Cracked-Narrow.ttf");
+}
+
+#container{
+	height:600px;
+	width:100%;
+	display:flex;
+	flex-direction: row:
+}
+
+#panino_container {
+	flex: 1;
+	height: 100%;
+	border: 2px solid red;
+}
+
+#selection_container {
+	padding-left: 2px;
+	flex: 2;
+	height: 100%;
+	border: 2px solid black;
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.ingredient_container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#price_container{
+	padding-top: 2px;
+	height: 100px;
+	width: 100%;
+}
+
+.ing_select{
+	width: 40%;
+	height: 40%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 3px solid #ffd801;
+	font-size: 24px;
+}
+
+
+
+.price-container{
+	border-bottom: 3px solid #ffd801;
+	font-size: 26px;
+	font-weight: bold;	
+	margin-left: 100px;
+}
+
+.legends{
+	color: #ffd801;
+	font-family: cracked-narrow;
+	font-size: 40px;
+	
+}
+
+fieldset {
+	border: 5px dashed #76d6de;
+	border-radius: 10px;
+}
+

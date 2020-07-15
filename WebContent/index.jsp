@@ -79,7 +79,8 @@
 				<button class="button-slide-menu">Menu</button>
 			</div>
 			<div class="div-button-slide-componi">
-				<button class="button-slide-componi">Componi il tuo panino</button>
+				<a href="Composition" style="text-decoration: none" class="button-slide-componi">Componi il tuo panino</a>
+				
 			</div>
 		</div>
 	</div>
