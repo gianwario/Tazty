@@ -60,21 +60,19 @@
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   margin-top: 0.5%;
-  margin-left:40%;
   height: 5%;
   width: 12%;
-  margin-left: 40%;
-  position: fixed;
-  display: inline-block;
+ align-self: flex-end;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+
   display: none;
+  width: 12%;
   z-index: 11;
-  position: absolute;
+  position: fixed;
   background-color: #f6f6f6;
-  width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 

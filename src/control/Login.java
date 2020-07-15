@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.EmailValidator;
 import model.UserBean;
 import model.UserDAO;
 
@@ -63,7 +62,7 @@ public class Login extends HttpServlet {
 		System.out.println(u);
 		if(u!=null) {
 			request.getSession().setAttribute("utente", u);
-			request.getSession().setMaxInactiveInterval(10);
+			request.getSession().setMaxInactiveInterval(3600);
 			requestDispatcher = request.getRequestDispatcher("index.jsp");
 		}
 		else {

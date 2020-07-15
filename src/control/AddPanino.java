@@ -1,7 +1,6 @@
 package control;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -11,11 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.EmailValidator;
+
 import model.PaninoBean;
 import model.PaninoDAO;
-import model.UserBean;
-import model.UserDAO;
 
 /**
  * Servlet implementation class AddPanino

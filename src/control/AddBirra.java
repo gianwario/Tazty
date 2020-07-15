@@ -10,20 +10,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.UserBean;
-import model.UserDAO;
+import model.BirraBean;
+import model.BirraDAO;
+
 
 /**
- * Servlet implementation class Register
+ * Servlet implementation class AddBirra
  */
-@WebServlet("/Register")
-public class Register extends HttpServlet {
+@WebServlet("/AddBirra")
+public class AddBirra extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Register() {
+	public AddBirra() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -44,44 +45,42 @@ public class Register extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserBean utente = new UserBean();
-		utente.setUsername(request.getParameter("username"));
-		utente.setNome(request.getParameter("nome"));
-		utente.setCognome(request.getParameter("cognome"));
-		utente.setPassword(request.getParameter("password"));
-		utente.setEmail(request.getParameter("email"));
-		utente.setIndirizzo(request.getParameter("indirizzo"));
-		utente.setCellulare(request.getParameter("phone"));
-		if (request.getParameter("username").length() == 0)
-			System.out.println("L'username non può essere vuoto");
+		BirraBean birra = new BirraBean();
+		birra.setNome(request.getParameter("nome"));
+		birra.setDescrizione(request.getParameter("descrizione"));
+		birra.setPrezzo(Double.parseDouble(request.getParameter("prezzo")));
+		birra.setGradi(Integer.parseInt(request.getParameter("gradi")));
+		birra.setColore(request.getParameter("colore"));
 		if (request.getParameter("nome").length() == 0)
 			System.out.println("Il nome non può essere vuoto");
-		if (request.getParameter("cognome").length() == 0)
+		if (request.getParameter("descrizione").length() == 0)
+			System.out.println("La descrizione non può essere vuota");
+		if (request.getParameter("prezzo").length() < 0)
 			System.out.println("Il cognome non può essere vuoto");
-		if (request.getParameter("password").length() < 6)
-			System.out.println("La password deve contenere almeno 6 caratteri");
 
 		RequestDispatcher requestDispatcher = null;
-		UserDAO uDao = new UserDAO();
+		BirraDAO uDao = new BirraDAO();
 
 		try {
-			if (uDao.check(utente.getUsername())) {
-				System.out.println("L'utente esiste gia.");
-				requestDispatcher = request.getRequestDispatcher("register.html");
+			if (uDao.check(birra.getNome())) {
+				System.out.println("Il panino esiste gia.");
+				requestDispatcher = request.getRequestDispatcher("admin.html");
+				requestDispatcher.forward(request, response);
 			}
 
 			else {
-				uDao.doSave(utente);
-				request.getSession().setAttribute("utente", utente);
+				uDao.doSave(birra);
+				request.getSession().setAttribute("birra", birra);
 				request.getSession().setMaxInactiveInterval(60);
-				requestDispatcher = request.getRequestDispatcher("index.jsp");
+				requestDispatcher = request.getRequestDispatcher("admin.html");
+				requestDispatcher.forward(request, response);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(utente);
-		requestDispatcher.forward(request, response);
+		System.out.println(birra);
+		
 	}
 
 }
