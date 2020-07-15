@@ -43,7 +43,6 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		System.out.println(username+password);
 		RequestDispatcher requestDispatcher = null;
 		
 		if(username==null || password==null || password.length() < 6) {
@@ -64,7 +63,7 @@ public class Login extends HttpServlet {
 		System.out.println(u);
 		if(u!=null) {
 			request.getSession().setAttribute("utente", u);
-			request.getSession().setMaxInactiveInterval(60);
+			request.getSession().setMaxInactiveInterval(10);
 			requestDispatcher = request.getRequestDispatcher("index.jsp");
 		}
 		else {
