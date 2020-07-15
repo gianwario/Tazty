@@ -29,13 +29,13 @@
 
 .utente{
 	color:white;
-	padding-bottom:10%;
+	padding-bottom:5%;
 	text-transform:uppercase;
 }
 
 .info{
 	color:white;
-	padding-bottom:10%;
+	font-size:18px;
 }
 
 .info_admin{

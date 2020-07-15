@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PaninoDAO {
+public class BirraDAO {
 	
 	/*public UserBean getPaninoByName (String u, String p) throws SQLException{
 		try {
@@ -34,7 +34,7 @@ public class PaninoDAO {
 		return null;	
 	}
 	*/
-	public void doSave(PaninoBean u) throws SQLException {
+	public void doSave(BirraBean u) throws SQLException {
 		ConnectionPool cp = new ConnectionPool();
 		java.sql.Connection con=null;
 		try {
@@ -45,7 +45,7 @@ public class PaninoDAO {
 		}
 		PreparedStatement ps = con.prepareStatement("insert into prodotto(nome,descrizione,prezzo) values (?,?,?);");
 		PreparedStatement select = con.prepareStatement("select cod_prodotto from prodotto where nome=?;");
-		PreparedStatement ps2 = con.prepareStatement("insert into panino(cod_prodotto,tipo_pane) values (?,?);");
+		PreparedStatement ps2 = con.prepareStatement("insert into birra(cod_prodotto,gradi,colore) values (?,?,?);");
 		
 		ps.setString(1, u.getNome());
 		ps.setString(2, u.getDescrizione());
@@ -56,7 +56,8 @@ public class PaninoDAO {
 		ResultSet rs = select.executeQuery();
 		if(rs.next())
 			ps2.setInt(1,rs.getInt("cod_prodotto"));
-		ps2.setString(2, u.getTipo());
+		ps2.setInt(2, u.getGradi());
+		ps2.setString(3, u.getColore());
 		ps2.execute();
 	}
 
