@@ -44,10 +44,13 @@
 	</div>
 		
 	<div id="navbar">
-		
-		<a class="nav-a" href="#">Home</a> <a class="nav-a" href="#news">News</a> <a class="nav-a" href="#contact">Contacts</a>
-		<a class="nav-a" href="gallery.html">Gallery</a>
-		 <div class="dropdown">
+		<div id="texts_box"> 
+			<a class="nav-a" href="#">Home</a> 
+			<a class="nav-a" href="#news">News</a> 
+			<a class="nav-a" href="#contact">Contacts</a>
+			<a class="nav-a" href="gallery.html">Gallery</a>
+		</div>
+		<div class="dropdown">
   			<button onclick="myFunction()" class="dropbtn">
 				<span class="fa fa-user" id="user-icon"></span>
 				<span id="user-text">Area utente</span>
