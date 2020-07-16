@@ -106,13 +106,13 @@ html {
 }
 
 #titlecontainer {
-  padding-top: 5%;
+  padding-top: 4%;
   display:flex;
   align-items: center;
   justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.mainpanel{
 		height:auto;
 		width:auto;
@@ -138,5 +138,23 @@ html {
  	
  	#title{
  		width:auto!important;
+ 	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+
+	.text {
+  		margin-top: 40%;
+  		font-size: 26px;
+ 	}
+ 	
+ 	.button-slide-menu{
+ 		padding:8px 40px;
+ 		font-size: 20px;
+ 	}
+ 	
+ 	.button-slide-componi{
+ 		padding:12px 40px;
+ 		font-size: 20px;
  	}
 }
