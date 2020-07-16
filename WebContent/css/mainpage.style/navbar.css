@@ -1,5 +1,5 @@
 
-	#navbar {
+#navbar {
 	margin-top: -1%;
 	position:fixed;
 	width: 100%;
@@ -11,6 +11,7 @@
   	justify-content: center;
   	align-items: center;
   	z-index:11;
+  	top: 0px;
 }	
 
 
@@ -92,26 +93,6 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #76d6de;}
 
-@media screen and (min-width: 780px){
-
-	
-.nav-a {
-	font-family: 'Open Sans', sans-serif;
-  	display: block;
-  	color: #f6f6f6;
-  	text-align: center;
-  	margin-top: 1%;
-  	padding: 10px 30px;
-  	text-decoration: none;
-  	font-size: 36px;
-}
-
-.nav-a:hover {
-  	color: #ffd801;
-}
-	
-}
-
 .sticky {
  	position: fixed;
  	margin-top:10%;
@@ -122,4 +103,52 @@
 .selected {
 	background-color : white;
 	color: black;
+}
+
+	
+.nav-a {
+	font-family: 'Open Sans', sans-serif;
+  	display: block;
+  	color: #f6f6f6;
+  	text-align: center;
+  	margin-top: 1%;
+  	padding: 3% 5%;
+  	text-decoration: none;
+  	font-size: 36px;
+}
+
+.nav-a:hover {
+  	color: #ffd801;
+}
+
+#texts_box {
+	
+	display: flex;
+	margin-left: 20%;
+	margin-right: 10%;
+	justify-content: space-around;
+}
+
+@media screen and (max-width: 800px){
+
+	.nav-a {		
+  		font-size: 25px;
+  		padding-right: 1%;
+	}
+	
+	#logo img {
+		
+		
+	}
+	
+	#logo {  display: none;}
+}
+
+@media screen and (max-width: 600px){
+
+	.nav-a {		
+  		font-size: 22px;
+  		
+}
+	
 }

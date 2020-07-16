@@ -39,15 +39,16 @@
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
 	onload="slide();">
-	<div id="logo">
-		<img src="images/logo2.png" alt="logo" style="height: 12%; width: 12%;">
-	</div>
+	
 		
 	<div id="navbar">
-		
-		<a class="nav-a" href="#">Home</a> <a class="nav-a" href="#news">News</a> <a class="nav-a" href="#contact">Contacts</a>
-		<a class="nav-a" href="gallery.html">Gallery</a>
-		 <div class="dropdown">
+		<div id="texts_box"> 
+			<a class="nav-a" href="#">Home</a> 
+			<a class="nav-a" href="#news">News</a> 
+			<a class="nav-a" href="#contact">Contacts</a>
+			<a class="nav-a" href="gallery.html">Gallery</a>
+		</div>
+		<div class="dropdown">
   			<button onclick="myFunction()" class="dropbtn">
 				<span class="fa fa-user" id="user-icon"></span>
 				<span id="user-text">Area utente</span>
@@ -100,15 +101,18 @@
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
 				onclick="plusSlides(1)">&#10095;</a>
 		</div>
-		<div class="mainpanel">
+		<div class="mainpanel">		
+			<img src="images/logo2.png">
 			<div class="text">L'Hamburgeria dove sei tu lo Chef!
 			</div>
-			<div class="div-button-slide-menu">
-				<a href="Menu" style="text-decoration: none" class="button-slide-menu">Menu</a>
-			</div>
-			<div class="div-button-slide-componi">
-				<a href="Composition" style="text-decoration: none" class="button-slide-componi">Componi il tuo panino</a>
-				
+						
+			<div id="buttons-box">
+				<div class="div-button-slide-menu">
+					<a href="Menu" style="text-decoration: none" class="button-slide-menu">Menu</a>
+				</div>
+				<div class="div-button-slide-componi">
+					<a href="Composition" style="text-decoration: none" class="button-slide-componi">Componi il tuo panino</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -230,7 +234,7 @@
 		<div id="names_box">
 			<div id="mark">Tazty&copy;</div>
 			<div class="names">
-				Alessio Casolaro<br> Viviana Pentangelo <br> Gianmirko
+				Alessio Casolaro<br> Viviana Pentangelo <br> Gianmario
 				Voria
 			</div>
 		</div>
@@ -238,7 +242,7 @@
 	</div>
 
 	<script>
-		// When the user scrolls the page, execute myFunction
+		/*// When the user scrolls the page, execute myFunction
 		window.onscroll = function() {
 			myFunction()
 		};
@@ -258,7 +262,7 @@
 				navbar.classList.remove("sticky");
 				logo.style.display = "flex";
 			}
-		}
+		}*/
 	</script>
 </body>
 </html>

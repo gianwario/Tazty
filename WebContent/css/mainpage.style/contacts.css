@@ -13,7 +13,8 @@
 } 
 
 #contact {
-	margin-top: 6%;
+	
+	padding-top: 3%;
 }
 
 i {
@@ -80,4 +81,12 @@ h2 {
 
 .innerbox_dx {
     margin-left: 5%;
+}
+
+@media only screen and (max-width: 650px) {		
+	
+	#contact {
+    padding-top: 16%;
+    }
+    	
 }

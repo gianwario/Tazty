@@ -1,5 +1,6 @@
 #news {
-    margin-top: 27%;
+    margin-top: 13%;
+    padding-top: 3%;
 }
 .project {
     display: block;
@@ -46,9 +47,11 @@ When the browser is 960px or larger.
 */
 
 @media screen and (min-width: 960px) {
+
 	.news-wrapper {
 		max-width: 960px;
-		margin: 3% auto;
+		margin: auto;
+    	margin-top: 3%;
 	}
 	.news-container {
 		display: grid;
@@ -85,4 +88,13 @@ When the browser is 960px or larger.
 		height: 200px;
 		width: 100%;
 	}
+}
+
+@media only screen and (max-width: 650px) {		
+	
+	#news {
+    padding-top: 16%;
+    margin-top: 0%;
+    }
+    	
 }
