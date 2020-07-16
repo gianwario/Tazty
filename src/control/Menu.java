@@ -11,11 +11,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.BirraBean;
 import model.BirraDAO;
 import model.IngredientBean;
 import model.IngredientDAO;
 import model.PaninoBean;
 import model.PaninoDAO;
+import model.StuzzicheriaBean;
 import model.StuzzicheriaDAO;
 
 /**
@@ -53,7 +55,12 @@ public class Menu extends HttpServlet {
 
 		try {
 			ArrayList<PaninoBean> pb = pd.getPaniniList();
+			ArrayList<StuzzicheriaBean> sb = sd.getStuzzicherieList();
+			ArrayList<BirraBean> bb = bd.getBirreList();
+			
 			request.setAttribute("panini", pb);
+			request.setAttribute("stuzzicherie", sb);
+			request.setAttribute("birre", bb);
 			
 			requestDispatcher = request.getRequestDispatcher("menu.jsp");
 		} catch (SQLException e) {

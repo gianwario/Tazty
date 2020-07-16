@@ -48,29 +48,73 @@
 				<a href="#" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello</a>
 			</div>
 		</div>
-		<div id="filters-container">
-		</div>
+		
 		<div class="sbrody">
-			
-			<fieldset>
-			<legend>Panini</legend>
-				
-				<div class="griglia">
-				<% ArrayList<PaninoBean> panini = (ArrayList<PaninoBean>)request.getAttribute("panini");
-					for(PaninoBean p : panini) {
+			<div id="filters-container">
+			</div>
+			<div>
+				<fieldset>
+				<legend>Panini</legend>
+					
+					<div class="griglia">
+					<% ArrayList<PaninoBean> panini2 = (ArrayList<PaninoBean>)request.getAttribute("panini");
+					for(PaninoBean p : panini2) {
 				%>
-					<div class="card">
-						<img src="images/Paninoshopping.jpg" style="width: 100%">
-						<h1 class="nome_prodotto"><%= p.getNome() %></h1>
-						<p class="descrizione"><%= p.getDescrizione() %></p>
-						<p class="prezzo">€ <%= p.getPrezzo() %></p>
-						<div>
-							<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+						<div class="card">
+							<h1 class="nome-prodotto"><img src="images/Paninoshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1 class="nome_prodotto"><%= p.getNome() %></h1>
+							<p class="descrizione"><%= p.getDescrizione() %></p>
+							<p class="descrizione">Tipo pane: <%= p.getTipo() %></p>
+							<p class="prezzo">€ <%= p.getPrezzo() %></p>
+							<div>
+								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+							</div>
 						</div>
+					<% } %>
 					</div>
-				<% } %>
-				</div>
-			</fieldset>
+				</fieldset>
+				<fieldset>
+				<legend>Stuzzicherie</legend>
+					
+					<div class="griglia">
+					<% ArrayList<StuzzicheriaBean> stuzzicherie = (ArrayList<StuzzicheriaBean>)request.getAttribute("stuzzicherie");
+					for(StuzzicheriaBean s : stuzzicherie) {
+					%>
+						<div class="card">
+							<h1 class="nome-prodotto"><img src="images/Patatineshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1 class="nome_prodotto"><%= s.getNome() %></h1>
+							<p class="descrizione"><%= s.getDescrizione() %></p>
+							<p class="descrizione">Tipo: <%= s.getTipo() %></p>
+							<p class="prezzo">€ <%= s.getPrezzo() %></p>
+							<div>
+								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+							</div>
+						</div>
+					<% } %>
+					</div>
+				</fieldset>
+					<fieldset>
+				<legend>Birre</legend>
+					
+					<div class="griglia">
+					<% ArrayList<BirraBean> birre = (ArrayList<BirraBean>)request.getAttribute("birre");
+					for(BirraBean b : birre) {
+					%>
+						<div class="card">
+							<h1 class="nome-prodotto"><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
+							<h1 class="nome_prodotto"><%= b.getNome() %></h1>
+							<p class="descrizione"><%= b.getDescrizione() %></p>
+							<p class="descrizione">Colore: <%= b.getColore() %></p>
+							<p class="descrizione">Gradazione: <%= b.getGradi() %></p>
+							<p class="prezzo">€ <%= b.getPrezzo() %></p>
+							<div>
+								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+							</div>
+						</div>
+					<% } %>
+					</div>
+				</fieldset>
+			</div>
 		</div>
 	</div>
 </body>

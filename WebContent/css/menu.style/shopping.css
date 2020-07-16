@@ -24,7 +24,7 @@
 
 .header {
 	width: 100%;
-	height: 15%;
+	height: 18%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -127,21 +127,23 @@
 #filters-container{
 	position: fixed;
 	left:0;
-	margin-top:10%;
-	width: 20%;
+	width: 25%;
+	height: 70%;
+	border: 2px solid black;
 }
 
 .sbrody {
-	width: 80%;
+	width: 100%;
 	margin-top: 10%;
-	margin-left:20%;
+	display: flex; 
+	flex-direction: row;
 }
 
 
 
 .griglia {
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: auto auto auto;
 	padding: 10px;
 }
 
@@ -154,7 +156,7 @@
 
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	max-width: 300px;
+	width: 70%;
 	margin: auto;
 	text-align: center;
 	margin-top: 10%;
@@ -162,7 +164,7 @@
 
 .nome_prodotto {
 	font-family: 'Balsamiq Sans', cursive;
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 10%;
 	margin-top: 2%;
 	color:  rgb(73, 71, 67);
@@ -267,6 +269,9 @@
 }
 
 fieldset {
+	width: 75%;
+	margin-left: 25%;
+	margin-bottom: 5%;
 	border: 5px dashed #76d6de;
 	border-radius: 10px;
 }
@@ -275,4 +280,19 @@ legend{
 	font-family: cracked-narrow;
 	font-size: 40px;
 	
+}
+
+@media only screen and (max-width: 800px){
+	.griglia {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 10px;
+}
+}
+@media only screen and (max-width: 600px){
+	.griglia {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 10px;
+}
 }
