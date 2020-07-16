@@ -10,17 +10,18 @@
 	flex-direction: row;
 }
 
-#panino_container {
-	flex: 1;
-	height: 100%;
-	border: 2px solid red;
+@media only screen and (max-width: 600px) {
+	
+	#container { 
+		flex-direction: column;
+		display: flex;
+	}
 }
 
 #selection_container {
 	padding-left: 2px;
-	flex: 2;
+	flex: 28;
 	height: 100%;
-	border: 2px solid black;
 	display: flex; 
 	flex-direction: column;
 	align-items: center;
@@ -35,12 +36,6 @@
 	align-items: center;
 }
 
-#price_container{
-	padding-top: 2px;
-	height: 100px;
-	width: 100%;
-}
-
 .ing_select{
 	width: 40%;
 	height: 40%;
@@ -51,11 +46,10 @@
 	font-size: 24px;
 }
 
-
-
 .price-container{
 	border-bottom: 3px solid #ffd801;
 	font-size: 26px;
+	color: #494743;
 	font-weight: bold;	
 	margin-left: 100px;
 }
@@ -68,7 +62,51 @@
 }
 
 fieldset {
-	border: 5px dashed #76d6de;
+	border: 5px double #76d6de;
 	border-radius: 10px;
+}
+
+#price_container {
+	padding-top: 2px;
+	height: 100px;
+	width: 100%;
+	height: 150px;
+	flex-direction: row;
+	display: flex;
+	margin-top: 1%;
+	align-items: center;
+}
+
+#totale {
+	
+	font-family: cracked-narrow;
+	color: #ffd801;
+	font-size: 45px;
+	margin-left: 33%;
+}
+
+#total-price {
+	
+	font-weight: bold;
+	margin-left: 6%;
+	font-size: 50px;
+	color: #494743;
+}
+
+#confirm {
+	
+	margin-left: 36%;
+	margin-bottom: 2%;
+	border-radius: 6px;
+	border: 1px groove white;
+	background-color: #76d6de;
+	font-family: 'Balsamiq Sans', cursive;
+	padding: 16px;
+	color: white;
+	font-size: 20px;
+}
+
+#confirm:hover {
+	color: #ffd801;
 }
 

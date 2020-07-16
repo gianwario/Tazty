@@ -1,140 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>Carrello</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/user.style/cart.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Open+Sans:400,700,600">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/cart.js"></script>
 </head>
 <body>
+	 <div class="row">
+    <div class="basket">
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Articolo</li>
+          <li class="price">Prezzo</li>
+          <li class="quantity">QuantitÃ¡</li>
+          <li class="subtotal">Totale</li>
+        </ul>
+      </div>
+      
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-details">
+            <h1 class="item-title"><strong><span>QUANTITÃ QUI</span> TITOLO PRODOTTO QUI</strong></h1>
+            <p><strong>DESCRIZIONE QUI</strong></p>
+            <p>CODICE PRODOTTO QUI</p>
+          </div>
+        </div>
+        <div class="price">22</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">TOTALE </div>
+        <div class="remove">
+          <button>Rimuovi</button>
+        </div>
+      </div>
+      
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-details">
+            <h1 class="item-title"><strong><span>QUANTITÃ QUI</span> TITOLO PRODOTTO QUI</strong></h1>
+            <p><strong>DESCRIZIONE QUI</strong></p>
+            <p>CODICE PRODOTTO QUI</p>
+          </div>
+        </div>
+        <div class="price">22</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">TOTALE </div>
+        <div class="remove">
+          <button>Rimuovi</button>
+        </div>
+      </div>
+      
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-details">
+            <h1 class="item-title"><strong><span>QUANTITÃ QUI</span> TITOLO PRODOTTO QUI</strong></h1>
+            <p><strong>DESCRIZIONE QUI</strong></p>
+            <p>CODICE PRODOTTO QUI</p>
+          </div>
+        </div>
+        <div class="price">22</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">TOTALE </div>
+        <div class="remove">
+          <button>Rimuovi</button>
+        </div>
+      </div>
+      
+       <div class="basket-product">
+        <div class="item">
+          <div class="product-details">
+            <h1 class="item-title"><strong><span>QUANTITÃ QUI</span> TITOLO PRODOTTO QUI</strong></h1>
+            <p><strong>DESCRIZIONE QUI</strong></p>
+            <p>CODICE PRODOTTO QUI</p>
+          </div>
+        </div>
+        <div class="price">22</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">TOTALE </div>
+        <div class="remove">
+          <button>Rimuovi</button>
+        </div>
+      </div>
+      
+       <div class="basket-product">
+        <div class="item">
+          <div class="product-details">
+            <h1 class="item-title"><strong><span>QUANTITÃ QUI</span> TITOLO PRODOTTO QUI</strong></h1>
+            <p><strong>DESCRIZIONE QUI</strong></p>
+            <p>CODICE PRODOTTO QUI</p>
+          </div>
+        </div>
+        <div class="price">22</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">TOTALE </div>
+        <div class="remove">
+          <button>Rimuovi</button>
+        </div>
+      </div>
+      
+    </div>
+   </div>
+     
+   
 
-
-
-	<div class="container">
-		<div class="heading">
-			<h1>
-				<span class="shopper">s</span> Shopping Cart
-			</h1>
-
-			<a href="#" class="visibility-cart transition is-open">X</a>
-		</div>
-
-		<div class="cart transition is-open">
-
-			<a href="#" class="btn btn-update">Update cart</a>
-
-
-			<div class="table">
-
-				<div class="layout-inline row th">
-					<div class="col col-pro">Product</div>
-					<div class="col col-price align-center ">Price</div>
-					<div class="col col-qty align-center">QTY</div>
-					<div class="col">VAT</div>
-					<div class="col">Total</div>
-				</div>
-
-				<div class="layout-inline row">
-
-					<div class="col col-pro layout-inline">
-						<img src="http://static.ddmcdn.com/gif/10-kitten-cuteness-1.jpg"
-							alt="kitten" />
-						<p>Happy Little Critter</p>
-					</div>
-
-					<div class="col col-price col-numeric align-center ">
-						<p>£59.99</p>
-					</div>
-
-					<div class="col col-qty layout-inline">
-						<a href="#" class="qty qty-minus">-</a> <input type="numeric"
-							value="3" /> <a href="#" class="qty qty-plus">+</a>
-					</div>
-
-					<div class="col col-vat col-numeric">
-						<p>£2.95</p>
-					</div>
-					<div class="col col-total col-numeric">
-						<p>£182.95</p>
-					</div>
-				</div>
-
-				<div class="layout-inline row row-bg2">
-
-					<div class="col col-pro layout-inline">
-						<img
-							src="http://lovemeow.com/wp-content/uploads/2012/05/kitten81.jpg"
-							alt="kitten" />
-						<p>Scared Little Kittie</p>
-					</div>
-
-					<div class="col col-price col-numeric align-center ">
-						<p>£23.99</p>
-					</div>
-
-					<div class="col col-qty  layout-inline">
-						<a href="#" class="qty qty-minus ">-</a> <input type="numeric"
-							value="1" /> <a href="#" class="qty qty-plus">+</a>
-					</div>
-
-					<div class="col col-vat col-numeric">
-						<p>£1.95</p>
-					</div>
-					<div class="col col-total col-numeric">
-						<p>£25.94</p>
-					</div>
-
-				</div>
-
-				<div class="layout-inline row">
-
-					<div class="col col-pro layout-inline">
-						<img
-							src="http://cdn.cutestpaw.com/wp-content/uploads/2012/04/l-my-first-kitten.jpg"
-							alt="kitten" />
-						<p>Curious Little Begger</p>
-					</div>
-
-					<div class="col col-price col-numeric align-center ">
-						<p>£59.99</p>
-					</div>
-
-					<div class="col col-qty layout-inline">
-						<a href="#" class="qty qty-minus">-</a> <input type="numeric"
-							value="3" /> <a href="#" class="qty qty-plus">+</a>
-					</div>
-
-					<div class="col col-vat col-numeric">
-						<p>£2.95</p>
-					</div>
-					<div class="col col-total col-numeric">
-						<p>£182.95</p>
-					</div>
-				</div>
-
-				<div class="tf">
-					<div class="row layout-inline">
-						<div class="col">
-							<p>VAT</p>
-						</div>
-						<div class="col"></div>
-					</div>
-					<div class="row layout-inline">
-						<div class="col">
-							<p>Shipping</p>
-						</div>
-						<div class="col"></div>
-					</div>
-					<div class="row layout-inline">
-						<div class="col">
-							<p>Total</p>
-						</div>
-						<div class="col"></div>
-					</div>
-				</div>
-			</div>
-
-			<a href="#" class="btn btn-update">Update cart</a>
-
-		</div>
-	</div>
+  
+  <div class="row2">
+   <div class="summary">
+        <div class="summary-total-items"><span class="total-items"></span> Articoli nel carrello</div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Sub-Totale</div>
+          <div class="subtotal-value final-value" id="basket-subtotal"> Sub TOTALE QUI</div>
+        </div>
+    
+        <div class="summary-total">
+          <div class="total-title">Totale</div>
+          <div class="total-value final-value" id="basket-total">130.00</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">Procedi all'ordine</button>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>
