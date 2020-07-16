@@ -16,7 +16,7 @@ public class ConnectionPool {
 			String db = "Tazty";
 			String username = "root";
 			String password = "root";
-			String url = "jdbc:mysql://127.0.0.1:3306/tazty?user=root&serverTimezone=UTC&useSSL=false";
+			String url = "jdbc:mysql://127.0.0.1:3306/tazty?user=root&allowPublicKeyRetrieval=true&serverTimezone=UTC&useSSL=false";
 			newConnection = DriverManager.getConnection(url,username,password);
 			return newConnection;
 		}catch (Exception e) {
