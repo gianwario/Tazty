@@ -54,21 +54,17 @@
 			
 			<fieldset>
 			<legend>Panini</legend>
-				
+				<
 				<div class="griglia">
-				<% ArrayList<PaninoBean> panini = (ArrayList<PaninoBean>)request.getAttribute("panini");
-					for(PaninoBean p : panini) {
-				%>
 					<div class="card">
 						<img src="images/Paninoshopping.jpg" style="width: 100%">
-						<h1 class="nome_prodotto"><%= p.getNome() %></h1>
-						<p class="descrizione"><%= p.getDescrizione() %></p>
-						<p class="prezzo">€ <%= p.getPrezzo() %></p>
+						<h1 class="nome_prodotto">Panino Sasicc e friariell</h1>
+						<p class="descrizione">Descrizione panino qui</p>
+						<p class="prezzo">â¬19.99</p>
 						<div>
 							<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
 						</div>
 					</div>
-				<% } %>
 				</div>
 			</fieldset>
 		</div>

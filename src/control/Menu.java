@@ -11,12 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.BirraDAO;
 import model.IngredientBean;
 import model.IngredientDAO;
-import model.PaninoBean;
-import model.PaninoDAO;
-import model.StuzzicheriaDAO;
 
 /**
  * Servlet implementation class Menu
@@ -46,22 +42,8 @@ public class Menu extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PaninoDAO pd = new PaninoDAO();
-		StuzzicheriaDAO sd = new StuzzicheriaDAO();
-		BirraDAO bd = new BirraDAO();
-		RequestDispatcher requestDispatcher = null;
-
-		try {
-			ArrayList<PaninoBean> pb = pd.getPaniniList();
-			request.setAttribute("panini", pb);
-			
-			requestDispatcher = request.getRequestDispatcher("menu.jsp");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		requestDispatcher.forward(request, response);		
-
+	
+		
 	}
 
 }

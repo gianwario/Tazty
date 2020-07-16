@@ -3,34 +3,37 @@ package model;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class PaninoDAO {
 	
-	public ArrayList<PaninoBean> getPaniniList() throws SQLException{
+	/*public UserBean getPaninoByName (String u, String p) throws SQLException{
 		try {
 			ConnectionPool cp = new ConnectionPool();
 			java.sql.Connection con = cp.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from prodotto,panino where prodotto.cod_prodotto=panino.cod_prodotto;");
+			PreparedStatement ps = con.prepareStatement("select * from utente where username=? and passw=?;");
+			ps.setString(1, u);
+			ps.setString(2, p);
 			ResultSet rs = ps.executeQuery();
-			ArrayList<PaninoBean> list = new ArrayList<PaninoBean>();
-			while(rs.next()) {
-				PaninoBean pb = new PaninoBean();
-				pb.setNome(rs.getString("nome"));
-				pb.setDescrizione(rs.getString("descrizione"));
-				pb.setTipo(rs.getString("tipo_pane"));
-				pb.setPrezzo(Double.parseDouble(rs.getString("prezzo")));
-				list.add(pb);
-				
+			if(rs.next()) {
+				UserBean ub = new UserBean();
+				ub.setUsername(rs.getString("username"));
+				ub.setNome(rs.getString("nome"));
+				ub.setCognome(rs.getString("cognome"));
+				ub.setEmail(rs.getString("email"));
+				ub.setIndirizzo(rs.getString("indirizzo"));
+				ub.setCellulare(rs.getString("cellulare"));
+				ub.setIsadmin(rs.getInt("isAdmin"));
+				System.out.println(ub);
+				return ub;
 			}
-			return list;
+			return null;
 			
 		}catch (Exception e) {
 			// TODO: handle exception
 		}
 		return null;	
 	}
-
+	*/
 	public void doSave(PaninoBean u) throws SQLException {
 		ConnectionPool cp = new ConnectionPool();
 		java.sql.Connection con=null;

@@ -1,9 +1,3 @@
-@font-face {
-	font-family: cracked-narrow;
-	src: url("../font/Cracked-Narrow.ttf");
-}
-
-
 * {
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
@@ -264,15 +258,4 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-fieldset {
-	border: 5px dashed #76d6de;
-	border-radius: 10px;
-}
-legend{
-	color: #ffd801;
-	font-family: cracked-narrow;
-	font-size: 40px;
-	
 }
