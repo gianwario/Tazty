@@ -1,5 +1,5 @@
 #news {
-    margin-top: 27%;
+    margin-top: 20%;
 }
 .project {
     display: block;
@@ -48,7 +48,8 @@ When the browser is 960px or larger.
 @media screen and (min-width: 960px) {
 	.news-wrapper {
 		max-width: 960px;
-		margin: 3% auto;
+		margin: auto;
+    	margin-top: 3%;
 	}
 	.news-container {
 		display: grid;
