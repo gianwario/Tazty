@@ -24,16 +24,27 @@ html {
 	flex-direction: column;
 	z-index:2;
 	height:80%;
-	width:25%;
+	width:35%;
 	margin-left: 6%;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 
 
+.mainpanel img {
+	
+	z-index: 10;
+	width: 52%;
+	height: 54%;
+	margin-left: 20%;
+}
 
+#buttons-box {
+	display: flex;
+	justify-content: space-between;
+}
 
 .text {
-  margin-top: 20%;
+  margin-top: 3%;
   color: #f2f2f2;
   text-align: center;
   font-size: 50px;
@@ -119,8 +130,6 @@ html {
 	}
 	
 	.text {
-  		margin-top: 55%;
-  		color:black;
   		font-size: 30px;
  	}
  	
@@ -139,6 +148,36 @@ html {
  	#title{
  		width:auto!important;
  	}
+ 	
+ 	#buttons-box {
+		display: flex;
+		justify-content: center; 	
+ 	}
+ 	
+ 	#buttons-box a {
+ 		font-size: 15px;
+ 	}
+ 	
+ 	  		
+ 	.mainpanel img {
+		width: 33%;
+		height: 35%;
+		margin-left: 30%;
+		margin-top: 8;
+	}
+	
+	.slideshow-container {
+		display: none;	
+	}
+	
+	#home {
+		background-image: url("../../images/Slide1.jpg");
+		background-size: 100% 100%;
+		margin-top: 14.6%;
+	}
+
+
+ 	
 }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
@@ -146,6 +185,7 @@ html {
 	.text {
   		margin-top: 40%;
   		font-size: 26px;
+  		color: white;
  	}
  	
  	.button-slide-menu{
@@ -157,4 +197,7 @@ html {
  		padding:12px 40px;
  		font-size: 20px;
  	}
-}
+	
+} 	
+
+
