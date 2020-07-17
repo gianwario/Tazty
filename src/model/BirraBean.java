@@ -1,18 +1,14 @@
 package model;
 
-public class BirraBean {
+public class BirraBean extends ProductBean{
 	
-	private String nome, descrizione, colore;
-	private double prezzo;
-	private int cod_birra,gradi;
+	private String colore;
+	private int gradi;
 	
 	public BirraBean() {
-		cod_birra=0;
-		nome= "";
-		descrizione= "";
+		
 		colore= "";
 		gradi= 0;
-		prezzo= 0;
 	}
 	
 	public String getColore() {
@@ -30,46 +26,5 @@ public class BirraBean {
 	public void setGradi(int gradi) {
 		this.gradi = gradi;
 	}
-
-	public int getCodice() {
-		return cod_birra;
-	}
-	
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	public String getDescrizione() {
-		return descrizione;
-	}
-
-	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
-	}
-
-
-	public double getPrezzo() {
-		return prezzo;
-	}
-
-	public void setPrezzo(double prezzo) {
-		this.prezzo = prezzo;
-	}
-
-	@Override
-	public boolean equals(Object arg0) {
-		// TODO Auto-generated method stub
-		return super.equals(arg0);
-	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
-	
-	
 
 }

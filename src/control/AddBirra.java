@@ -64,7 +64,7 @@ public class AddBirra extends HttpServlet {
 		try {
 			if (uDao.check(birra.getNome())) {
 				System.out.println("Il panino esiste gia.");
-				requestDispatcher = request.getRequestDispatcher("admin.html");
+				requestDispatcher = request.getRequestDispatcher("admin.jsp");
 				requestDispatcher.forward(request, response);
 			}
 
@@ -72,7 +72,7 @@ public class AddBirra extends HttpServlet {
 				uDao.doSave(birra);
 				request.getSession().setAttribute("birra", birra);
 				request.getSession().setMaxInactiveInterval(60);
-				requestDispatcher = request.getRequestDispatcher("admin.html");
+				requestDispatcher = request.getRequestDispatcher("admin.jsp");
 				requestDispatcher.forward(request, response);
 			}
 		} catch (SQLException e) {
