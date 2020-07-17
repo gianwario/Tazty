@@ -150,6 +150,7 @@ html {
  	}
  	
  	#buttons-box {
+ 		flex-direction: column;
 		display: flex;
 		justify-content: center; 	
  	}
@@ -171,9 +172,10 @@ html {
 	}
 	
 	#home {
-		background-image: url("../../images/Slide1.jpg");
+		background-image: url("../../images/Slideshow/Slide1.jpg");
 		background-size: 100% 100%;
-		margin-top: 14.6%;
+		margin-top: 11.3%;
+		padding-bottom: 30px;
 	}
 
 

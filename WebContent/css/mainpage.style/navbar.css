@@ -1,6 +1,6 @@
 
 #navbar {
-	margin-top: -1%;
+	margin-top: -2%;
 	position:fixed;
 	width: 100%;
 	min-height: 9%;
@@ -50,7 +50,7 @@
   height:100%;
   width: 100%;
   padding: 16px;
-  font-size: 16px;
+  font-size: 12px;
   border: none;
   background-color: #ffd801;
   display: flex;
@@ -61,7 +61,7 @@
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   margin-top: 0.5%;
-  height: 5%;
+  height: 6rem;
   width: 12%;
  align-self: flex-end;
 }
@@ -112,13 +112,18 @@
   	color: #f6f6f6;
   	text-align: center;
   	margin-top: 3%;
-  	padding: 3% 5%;
+  	padding: 3% 6%;
   	text-decoration: none;
   	font-size: 36px;
 }
 
 .nav-a:hover {
   	color: #ffd801;
+}
+
+#dropdown-menu {
+	
+	float: right;
 }
 
 #texts_box {
@@ -131,9 +136,8 @@
 
 @media screen and (max-width: 800px){
 
-	.nav-a {		
-  		font-size: 25px;
-  		padding-right: 1%;
+	#texts_box {
+		display: none;
 	}
 	
 	#logo img {
@@ -142,13 +146,82 @@
 	}
 	
 	#logo {  display: none;}
-}
-
-@media screen and (max-width: 600px){
-
-	.nav-a {		
-  		font-size: 22px;
-  		
-}
 	
+	#user-text {
+		display: none;
+	}
+	
+	.dropdown {
+  		height: 3.9rem;
+  	}
+	
+	.dropdown-content {
+		width: 30%;
+	}
+	
+	.dropbtn {
+		padding: 2px;
+	}
+	#navbar {
+		justify-content: flex-start;
+		padding-right: 20%;
+	}
 }
+
+@media screen and (min-width: 801px){
+	.dropbtn2 {
+		display: none;
+		}	
+}
+
+
+.dropbtn2 {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.dropbtn2 span {
+	color: #ffd801;
+	font-size: 25px;
+}
+
+.dropbtn2 span:hover, .dropbtn i:focus {
+  color: white;
+}
+
+
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content2 {
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 11;
+}
+
+.dropdown-content2 a {
+  color: white;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(73, 71, 67, 0.8);
+  z-index: 11;
+}
+
+.dropdown2 a:hover {color: #ffd801;}
+
+.show {display: block;}
