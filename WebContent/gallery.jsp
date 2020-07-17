@@ -2,8 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%@ page import="model.*"%>
-
-
 <!doctype html>
 <html>
 
@@ -30,16 +28,15 @@
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;">
 
+	
 	<div id="navbar">
 		<div id="texts_box"> 
-			<a class="nav-a" href="#">Home</a> 
-			<a class="nav-a" href="#news">News</a> 
-			<a class="nav-a" href="#contact">Contacts</a>
-			<a class="nav-a" href="gallery.jsp">Gallery</a>
+			<a class="nav-a" href="index.jsp">Home</a> 
+			<a class="nav-a" href="index.jsp#news">News</a> 
+			<a class="nav-a" href="index.jsp#contact">Contacts</a>
+			<a class="nav-a" href="#">Gallery</a>
 		</div>
-	</div>
-	
-	<div class="dropdown">
+		<div class="dropdown">
   			<button onclick="myFunction()" class="dropbtn">
 				<span class="fa fa-user" id="user-icon"></span>
 				<span id="user-text">Area utente</span>
@@ -64,14 +61,15 @@
 				if(u.getIsadmin() == 1)
 				{
 			%>
-				<a href="admin.html">Pagina Admin</a>
+				<a href="admin.jsp">Pagina Admin</a>
 			<%
 			
 				}
 			}
 		  	%>
 		  	</div>
-		</div>
+		</div>	
+	</div>
 	
 
 	<div class="gallery-div">

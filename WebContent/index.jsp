@@ -46,7 +46,7 @@
 			<a class="nav-a" href="#">Home</a> 
 			<a class="nav-a" href="#news">News</a> 
 			<a class="nav-a" href="#contact">Contacts</a>
-			<a class="nav-a" href="gallery.html">Gallery</a>
+			<a class="nav-a" href="gallery.jsp">Gallery</a>
 		</div>
 		<div class="dropdown">
   			<button onclick="myFunction()" class="dropbtn">
@@ -73,17 +73,14 @@
 				if(u.getIsadmin() == 1)
 				{
 			%>
-				<a href="admin.html">Pagina Admin</a>
+				<a href="admin.jsp">Pagina Admin</a>
 			<%
 			
 				}
 			}
 		  	%>
 		  	</div>
-		</div>
-		
-		
-		
+		</div>	
 	</div>
 	
 	
