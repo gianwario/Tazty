@@ -30,6 +30,33 @@ public class PaninoDAO {
 		}
 		return null;	
 	}
+	
+	public ArrayList<PaninoBean> getPaniniByName(String q){
+		try {
+			ArrayList<PaninoBean> list = new ArrayList<PaninoBean>();
+			ConnectionPool cp = new ConnectionPool();
+			java.sql.Connection con = cp.getConnection();
+			PreparedStatement ps = con.prepareStatement("select * from prodotto,panino where prodotto.cod_prodotto=panino.cod_prodotto AND prodotto.nome LIKE ?;");
+			ps.setString(1, "%"+q+"%");
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				PaninoBean pb = new PaninoBean();
+				pb.setNome(rs.getString("nome"));
+				pb.setDescrizione(rs.getString("descrizione"));
+				pb.setTipo(rs.getString("tipo_pane"));
+				pb.setPrezzo(Double.parseDouble(rs.getString("prezzo")));
+				list.add(pb);
+				
+			}
+			return list;
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+		
+	}
 
 	public void doSave(PaninoBean u) throws SQLException {
 		ConnectionPool cp = new ConnectionPool();

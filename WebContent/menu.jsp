@@ -36,13 +36,14 @@
 		  		</a>
 		  	</div>
 		  	<div class="wrap">
-					<div class="search">
+					<form class="search" action="Ricerca" method="GET">
 						<input class="searchTerm" type="text" placeholder="Cerca.."
-							name="cerca">
+							name="cerca" onkeyup="ricercaAjax(this.value)" list="ricerca-datalist">
 						<button class="searchButton" type="submit">
 							<i class="fa fa-search"></i>
 						</button>
-					</div>
+						<datalist id="ricerca-datalist"></datalist>
+					</form>
 			</div>
 			<div id="order">
 				<a href="#" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello</a>
@@ -52,16 +53,17 @@
 		<div class="sbrody">
 			<div id="filters-container">
 			</div>
-			<div>
+			<% if(request.getAttribute("cercato")==null){ %>
+			<div id="menus">
 				<fieldset>
 				<legend>Panini</legend>
 					
 					<div class="griglia">
 					<% ArrayList<PaninoBean> panini2 = (ArrayList<PaninoBean>)request.getAttribute("panini");
 					for(PaninoBean p : panini2) {
-				%>
+					%>
 						<div class="card">
-							<h1 class="nome-prodotto"><img src="images/Paninoshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Paninoshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= p.getNome() %></h1>
 							<p class="descrizione"><%= p.getDescrizione() %></p>
 							<p class="descrizione">Tipo pane: <%= p.getTipo() %></p>
@@ -81,7 +83,7 @@
 					for(StuzzicheriaBean s : stuzzicherie) {
 					%>
 						<div class="card">
-							<h1 class="nome-prodotto"><img src="images/Patatineshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Patatineshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= s.getNome() %></h1>
 							<p class="descrizione"><%= s.getDescrizione() %></p>
 							<p class="descrizione">Tipo: <%= s.getTipo() %></p>
@@ -93,15 +95,15 @@
 					<% } %>
 					</div>
 				</fieldset>
-					<fieldset>
-				<legend>Birre</legend>
+				<fieldset>
+					<legend>Birre</legend>
 					
 					<div class="griglia">
 					<% ArrayList<BirraBean> birre = (ArrayList<BirraBean>)request.getAttribute("birre");
 					for(BirraBean b : birre) {
 					%>
 						<div class="card">
-							<h1 class="nome-prodotto"><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= b.getNome() %></h1>
 							<p class="descrizione"><%= b.getDescrizione() %></p>
 							<p class="descrizione">Colore: <%= b.getColore() %></p>
@@ -115,7 +117,61 @@
 					</div>
 				</fieldset>
 			</div>
+			<% } else { %>
+				<fieldset>
+					<legend>Prodotti trovati</legend>
+					
+					<div class="griglia">
+					<% ArrayList<PaninoBean> prodotti = (ArrayList<PaninoBean>)request.getAttribute("prodotti");
+					for(PaninoBean b : prodotti) {
+					%>
+						<div class="card">
+							<h1><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
+							<h1 class="nome_prodotto"><%= b.getNome() %></h1>
+							<p class="descrizione"><%= b.getDescrizione() %></p>
+							<p class="prezzo">€ <%= b.getPrezzo() %></p>
+							<div>
+								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+							</div>
+						</div>
+					<% } %>
+					</div>
+				</fieldset>
+			
+			<% } %>
+			
 		</div>
 	</div>
+	<script>
+	function ricercaAjax(str) {
+		var dataList = document.getElementById('ricerca-datalist');
+		if (str.length == 0) {
+			// rimuove elementi <option> (suggerimenti) esistenti
+			dataList.innerHTML = ' ';
+			return;
+		}
+
+		var xmlHttpReq = new XMLHttpRequest();
+		xmlHttpReq.responseType = 'json';
+		xmlHttpReq.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				// rimuove elementi <option> (suggerimenti) esistenti
+				dataList.innerHTML = ' ';
+
+				for ( var i in this.response) {
+				
+					// crea un elemento option
+					var option = document.createElement('option');
+					// setta il valore
+					option.value = this.response[i];
+					// aggiunge elemento <option> a datalist
+					dataList.appendChild(option);
+				}
+			}
+		}
+		xmlHttpReq.open("GET", "RicercaAJAX?q=" + encodeURIComponent(str), true);
+		xmlHttpReq.send();
+	}
+	</script>
 </body>
 </html>
