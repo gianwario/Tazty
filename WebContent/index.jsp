@@ -15,6 +15,7 @@
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
 	rel="stylesheet">
 <script src="js/slide.js"></script>
+<script src="js/backtotop.js"></script>
 <link rel="stylesheet" href="css/mainpage.style/slide.css"
 	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/main.css"
@@ -27,6 +28,7 @@
 	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/footer.css"
 	type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/backtotop.css" type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link
@@ -38,84 +40,74 @@
 </head>
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
-	onload="slide();">
-	
-		
+	onload="slide();" onscroll="scrollFunction();">
+
+
 	<div id="navbar">
-		<div id="texts_box"> 
-			<a class="nav-a" href="#">Home</a> 
-			<a class="nav-a" href="#news">News</a> 
-			<a class="nav-a" href="#contact">Contacts</a>
-			<a class="nav-a" href="gallery.jsp">Gallery</a>
+		<div id="texts_box">
+			<a class="nav-a" href="#">Home</a> <a class="nav-a" href="#news">News</a>
+			<a class="nav-a" href="#contact">Contacts</a> <a class="nav-a"
+				href="gallery.jsp">Gallery</a>
 		</div>
 		<div class="dropdown">
-  			<button onclick="myFunction()" class="dropbtn">
-				<span class="fa fa-user" id="user-icon"></span>
-				<span id="user-text">Area utente</span>
-				<span class="fa fa-caret-down" style="font-size:30px;padding-top: 2%;"></span>
+			<button onclick="myFunction()" class="dropbtn">
+				<span class="fa fa-user" id="user-icon"></span> <span id="user-text">Area
+					utente</span> <span class="fa fa-caret-down"
+					style="font-size: 30px; padding-top: 2%;"></span>
 			</button>
-		  	<div id="myDropdown" class="dropdown-content">
-		  	<%	
-		 	if(request.getSession().getAttribute("utente")==null)
-		 	{
-		 	%>
-			    <a href="login.html">Login</a>
-			    <a href="register.html">Registrati</a>
-			<%	
-			} 
-		 	else 
-		 	{
-		 		UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
-			%>
-				<a id="logout" href="Logout">Logout</a>
-				<a href="#">Profilo</a>
-			<%
-				if(u.getIsadmin() == 1)
-				{
-			%>
+			<div id="myDropdown" class="dropdown-content">
+				<%
+					if (request.getSession().getAttribute("utente") == null) {
+				%>
+				<a href="login.html">Login</a> <a href="register.html">Registrati</a>
+				<%
+					} else {
+					UserBean u = (UserBean) request.getSession().getAttribute("utente");
+				%>
+				<a id="logout" href="Logout">Logout</a> <a href="#">Profilo</a>
+				<%
+					if (u.getIsadmin() == 1) {
+				%>
 				<a href="admin.jsp">Pagina Admin</a>
-			<%
-			
+				<%
+					}
 				}
-			}
-		  	%>
-		  	</div>
-		</div>	
+				%>
+			</div>
+		</div>
 	</div>
-	
-	
+
+
 
 	<div id="home">
 		<div class="slideshow-container">
 			<div class="mySlides fade">
-				<img src="images/Slide1.jpg" style="width: 100%">
+				<img src="images/Slideshow/Slide1.jpg" style="width: 100%">
 			</div>
 
 			<div class="mySlides fade">
-				<img src="images/Slide2.jpg" style="width: 100%">
+				<img src="images/Slideshow/Slide2.jpg" style="width: 100%">
 			</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
 				onclick="plusSlides(1)">&#10095;</a>
 		</div>
-		<div class="mainpanel">		
+		<div class="mainpanel">
 			<img src="images/logo2.png">
-			<div class="text">L'Hamburgeria dove sei tu lo Chef!
-			</div>
-						
+			<div class="text">L'Hamburgeria dove sei tu lo Chef!</div>
+
 			<div id="buttons-box">
 				<div class="div-button-slide-menu">
-					<a href="Menu" style="text-decoration: none" class="button-slide-menu">Menu</a>
+					<a href="Menu" style="text-decoration: none"
+						class="button-slide-menu">Menu</a>
 				</div>
 				<div class="div-button-slide-componi">
-					<a href="Composition" style="text-decoration: none" class="button-slide-componi">Componi il tuo panino</a>
+					<a href="Composition" style="text-decoration: none"
+						class="button-slide-componi">Componi il tuo panino</a>
 				</div>
 			</div>
 		</div>
 	</div>
-
-		 		
-
 
 
 	<div id="news">
@@ -158,8 +150,7 @@
 					</figure>
 				</a> <a class="project" href="#">
 					<figure>
-						<img src="images/05.jpg" alt="Yellow play balls"
-							title="Yellow">
+						<img src="images/05.jpg" alt="Yellow play balls" title="Yellow">
 						<figcaption>
 							<div>
 								<h3>Yellow</h3>
@@ -238,28 +229,12 @@
 
 	</div>
 
-	<script>
-		/*// When the user scrolls the page, execute myFunction
-		window.onscroll = function() {
-			myFunction()
-		};
 
-		// Get the navbar
-		var navbar = document.getElementById("navbar");
-		var logo = document.getElementById("logo");
-		// Get the offset position of the navbar
-		var sticky = navbar.offsetTop;
 
-		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
-			if (window.pageYOffset >= sticky) {
-				logo.style.display = "none";
-				navbar.classList.add("sticky");
-			} else {
-				navbar.classList.remove("sticky");
-				logo.style.display = "flex";
-			}
-		}*/
-	</script>
+
+	<button onclick="topFunction()" id="myBtn" title="Torna su">
+		<i class="fa fa-chevron-up"></i>
+	</button>
+
 </body>
 </html>

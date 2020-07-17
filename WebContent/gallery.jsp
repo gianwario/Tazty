@@ -11,10 +11,12 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
 	rel="stylesheet">
-<script src="js/slide.js"></script>
+<script src="js/backtotop.js"></script>
 <link rel="stylesheet" href="css/mainpage.style/gallery.css"
 	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/navbar.css"
+	type="text/css">
+<link rel="stylesheet" href="css/mainpage.style/backtotop.css"
 	type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,52 +27,43 @@
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
 	rel="stylesheet">
 </head>
-<body
-	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;">
+<body onscroll="scrollFunction();">
 
-	
+
 	<div id="navbar">
-		<div id="texts_box"> 
-			<a class="nav-a" href="index.jsp">Home</a> 
-			<a class="nav-a" href="index.jsp#news">News</a> 
-			<a class="nav-a" href="index.jsp#contact">Contacts</a>
-			<a class="nav-a" href="#">Gallery</a>
+		<div id="texts_box">
+			<a class="nav-a" href="index.jsp">Home</a> <a class="nav-a"
+				href="index.jsp#news">News</a> <a class="nav-a"
+				href="index.jsp#contact">Contacts</a> <a class="nav-a" href="#">Gallery</a>
 		</div>
 		<div class="dropdown">
-  			<button onclick="myFunction()" class="dropbtn">
-				<span class="fa fa-user" id="user-icon"></span>
-				<span id="user-text">Area utente</span>
-				<span class="fa fa-caret-down" style="font-size:30px;padding-top: 2%;"></span>
+			<button onclick="myFunction()" class="dropbtn">
+				<span class="fa fa-user" id="user-icon"></span> <span id="user-text">Area
+					utente</span> <span class="fa fa-caret-down"
+					style="font-size: 30px; padding-top: 2%;"></span>
 			</button>
-		  	<div id="myDropdown" class="dropdown-content">
-		  	<%	
-		 	if(request.getSession().getAttribute("utente")==null)
-		 	{
-		 	%>
-			    <a href="login.html">Login</a>
-			    <a href="register.html">Registrati</a>
-			<%	
-			} 
-		 	else 
-		 	{
-		 		UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
-			%>
-				<a id="logout" href="Logout">Logout</a>
-				<a href="#">Profilo</a>
-			<%
-				if(u.getIsadmin() == 1)
-				{
-			%>
+			<div id="myDropdown" class="dropdown-content">
+				<%
+					if (request.getSession().getAttribute("utente") == null) {
+				%>
+				<a href="login.html">Login</a> <a href="register.html">Registrati</a>
+				<%
+					} else {
+					UserBean u = (UserBean) request.getSession().getAttribute("utente");
+				%>
+				<a id="logout" href="Logout">Logout</a> <a href="#">Profilo</a>
+				<%
+					if (u.getIsadmin() == 1) {
+				%>
 				<a href="admin.jsp">Pagina Admin</a>
-			<%
-			
+				<%
+					}
 				}
-			}
-		  	%>
-		  	</div>
-		</div>	
+				%>
+			</div>
+		</div>
 	</div>
-	
+
 
 	<div class="gallery-div">
 		<div id="titlecontainer">
@@ -229,7 +222,7 @@
 			<div id="title">Birre</div>
 		</div>
 		<p>Scopri anche le nostre birre artigianali piú gustose!</p>
-		
+
 		<div class="grid-container">
 
 			<article class="article-box">
@@ -237,47 +230,43 @@
 				<div class="article-image">
 					<a href="#"> <img
 						src="images/Gallery/Birre/Birraartigianale.jpg"
-						alt="Birra Artigianale"> 
+						alt="Birra Artigianale">
 					</a>
 				</div>
 			</article>
-			
+
 			<article class="article-box">
 				<a class="article-title" href="#">Birra Chiara Rossa Scura</a>
 				<div class="article-image">
-					<a href="#"> <img
-						src="images/Gallery/Birre/birra2.jpg"
-						alt="Birra  Chiara Rossa Scura"> 
+					<a href="#"> <img src="images/Gallery/Birre/birra2.jpg"
+						alt="Birra  Chiara Rossa Scura">
 					</a>
 				</div>
 			</article>
-			
+
 			<article class="article-box">
 				<a class="article-title" href="#">Birra GB</a>
 				<div class="article-image">
-					<a href="#"> <img
-						src="images/Gallery/Birre/birra3.jpg"
-						alt="Birra GB"> 
+					<a href="#"> <img src="images/Gallery/Birre/birra3.jpg"
+						alt="Birra GB">
 					</a>
 				</div>
 			</article>
-			
+
 			<article class="article-box">
 				<a class="article-title" href="#">Birra Nygarda</a>
 				<div class="article-image">
-					<a href="#"> <img
-						src="images/Gallery/Birre/birra4.jpg"
-						alt="Birra Nygarda"> 
+					<a href="#"> <img src="images/Gallery/Birre/birra4.jpg"
+						alt="Birra Nygarda">
 					</a>
 				</div>
 			</article>
-			
+
 			<article class="article-box">
 				<a class="article-title" href="#">Birra Brewdog</a>
 				<div class="article-image">
-					<a href="#"> <img
-						src="images/Gallery/Birre/birra5.jpg"
-						alt="Birra Brewdog"> 
+					<a href="#"> <img src="images/Gallery/Birre/birra5.jpg"
+						alt="Birra Brewdog">
 					</a>
 				</div>
 			</article>
@@ -285,5 +274,9 @@
 		</div>
 		<!-- end grid container -->
 	</div>
+
+	<button onclick="topFunction()" id="myBtn" title="Torna su">
+		<i class="fa fa-chevron-up"></i>
+	</button>
 </body>
 </html>

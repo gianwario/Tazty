@@ -11,10 +11,11 @@
 	<title>Admin</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<script src="js/slide.js"></script>
+	<script src="js/backtotop.js"></script>
 	<link rel="stylesheet" href="css/user.style/admin.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
 	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/backtotop.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -40,7 +41,7 @@
 	  
 	</script>
 </head>
-<body onload="redirect()">
+<body onload="redirect()" onscroll="scrollFunction();">
 
 			<%
 			if(u!=null&&u.getIsadmin() !=1)
@@ -183,6 +184,10 @@
   		</div>
   	
   	</div>
+  	
+  	<button onclick="topFunction()" id="myBtn" title="Torna su">
+		<i class="fa fa-chevron-up"></i>
+	</button>
 
 </body>
 </html>
