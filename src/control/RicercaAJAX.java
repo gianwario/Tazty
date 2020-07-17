@@ -1,6 +1,7 @@
 package control;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -13,6 +14,8 @@ import org.json.JSONArray;
 
 import model.PaninoBean;
 import model.PaninoDAO;
+import model.ProductBean;
+import model.ProductDAO;
 
 /**
  * Servlet implementation class RicercaAJAX
@@ -38,10 +41,17 @@ public class RicercaAJAX extends HttpServlet {
 		String query = request.getParameter("q");
 
 		if (query != null) {
-			ArrayList<PaninoBean> panini = new PaninoDAO().getPaniniByName(query);
-			for (PaninoBean panino : panini) {
-				prodJson.put(panino.getNome());
+			ArrayList<ProductBean> prodotti;
+			try {
+				prodotti = new ProductDAO().getProductListByName(query);
+				for (ProductBean prodotto : prodotti) {
+					prodJson.put(prodotto.getNome());
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			
 		}
 		response.setContentType("application/json");
 		response.getWriter().append(prodJson.toString());

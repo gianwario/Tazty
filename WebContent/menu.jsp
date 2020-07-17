@@ -69,7 +69,10 @@
 							<p class="descrizione">Tipo pane: <%= p.getTipo() %></p>
 							<p class="prezzo">€ <%= p.getPrezzo() %></p>
 							<div>
-								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								<form action="<%= response.encodeURL("CarrelloServlet") %>" method="POST">
+									<input type="text" value="<%= p.getCod_prodotto() %>" name="codice" style="display:none">
+									<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								</form>
 							</div>
 						</div>
 					<% } %>
@@ -89,7 +92,10 @@
 							<p class="descrizione">Tipo: <%= s.getTipo() %></p>
 							<p class="prezzo">€ <%= s.getPrezzo() %></p>
 							<div>
-								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								<form action="<%= response.encodeURL("CarrelloServlet") %>" method="POST">
+									<input type="text" value="<%= s.getCod_prodotto() %>" name="codice" style="display:none">
+									<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								</form>							
 							</div>
 						</div>
 					<% } %>
@@ -110,7 +116,10 @@
 							<p class="descrizione">Gradazione: <%= b.getGradi() %></p>
 							<p class="prezzo">€ <%= b.getPrezzo() %></p>
 							<div>
-								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								<form action="<%= response.encodeURL("CarrelloServlet") %>" method="POST">
+									<input type="text" value="<%= b.getCod_prodotto() %>" name="codice" style="display:none">
+									<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								</form>
 							</div>
 						</div>
 					<% } %>
@@ -122,8 +131,8 @@
 					<legend>Prodotti trovati</legend>
 					
 					<div class="griglia">
-					<% ArrayList<PaninoBean> prodotti = (ArrayList<PaninoBean>)request.getAttribute("prodotti");
-					for(PaninoBean b : prodotti) {
+					<% ArrayList<ProductBean> prodotti = (ArrayList<ProductBean>)request.getAttribute("prodotti");
+					for(ProductBean b : prodotti) {
 					%>
 						<div class="card">
 							<h1><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>

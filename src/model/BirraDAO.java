@@ -16,6 +16,8 @@ public class BirraDAO {
 			ArrayList<BirraBean> list = new ArrayList<BirraBean>();
 			while(rs.next()) {
 				BirraBean bb = new BirraBean();
+				bb.setCod_prodotto(Integer.parseInt(rs.getString("cod_prodotto")));
+
 				bb.setNome(rs.getString("nome"));
 				bb.setDescrizione(rs.getString("descrizione"));
 				bb.setColore(rs.getString("colore"));

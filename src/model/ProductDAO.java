@@ -32,6 +32,31 @@ public class ProductDAO {
 		return null;	
 	}
 	
+	public ArrayList<ProductBean> getProductListByName(String str) throws SQLException{
+		try {
+			ConnectionPool cp = new ConnectionPool();
+			java.sql.Connection con = cp.getConnection();
+			PreparedStatement ps = con.prepareStatement("select * from prodotto where nome LIKE ?;");
+			ps.setString(1, "%"+str+"%");
+			ResultSet rs = ps.executeQuery();
+			ArrayList<ProductBean> list = new ArrayList<ProductBean>();
+			while(rs.next()) {
+				ProductBean pb = new ProductBean();
+				pb.setCod_prodotto(Integer.parseInt(rs.getString("cod_prodotto")));
+				pb.setNome(rs.getString("nome"));
+				pb.setDescrizione(rs.getString("descrizione"));
+				pb.setPrezzo(Double.parseDouble(rs.getString("prezzo")));
+				list.add(pb);
+				
+			}
+			return list;
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;	
+	}
+	
 	
 	public ProductBean getByCodice(int codice){
 		try {

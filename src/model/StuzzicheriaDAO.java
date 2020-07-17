@@ -16,6 +16,8 @@ public class StuzzicheriaDAO {
 			ArrayList<StuzzicheriaBean> list = new ArrayList<StuzzicheriaBean>();
 			while(rs.next()) {
 				StuzzicheriaBean sb = new StuzzicheriaBean();
+				sb.setCod_prodotto(Integer.parseInt(rs.getString("cod_prodotto")));
+
 				sb.setNome(rs.getString("nome"));
 				sb.setDescrizione(rs.getString("descrizione"));
 				sb.setTipo(rs.getString("tipo"));

@@ -55,7 +55,10 @@ public class CarrelloServlet extends HttpServlet {
 		}
 		carrello.add(prodotto);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/cart.jsp");
+
+
+		
+		RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
 		rd.forward(request, response);
 	}
 

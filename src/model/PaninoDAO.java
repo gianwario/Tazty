@@ -16,6 +16,7 @@ public class PaninoDAO {
 			ArrayList<PaninoBean> list = new ArrayList<PaninoBean>();
 			while(rs.next()) {
 				PaninoBean pb = new PaninoBean();
+				pb.setCod_prodotto(Integer.parseInt(rs.getString("cod_prodotto")));
 				pb.setNome(rs.getString("nome"));
 				pb.setDescrizione(rs.getString("descrizione"));
 				pb.setTipo(rs.getString("tipo_pane"));

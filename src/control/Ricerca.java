@@ -1,6 +1,7 @@
 package control;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.PaninoBean;
 import model.PaninoDAO;
+import model.ProductBean;
+import model.ProductDAO;
 
 /**
  * Servlet implementation class Ricerca
@@ -34,13 +37,20 @@ public class Ricerca extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nomeprodotto = request.getParameter("cerca");
-		PaninoDAO pd = new PaninoDAO();
+		ProductDAO pd = new ProductDAO();
 		if(nomeprodotto!=null) {
-			ArrayList<PaninoBean> prodotti = pd.getPaniniByName(nomeprodotto);
-			if(prodotti!=null) {
-				request.setAttribute("prodotti", prodotti);
-				request.setAttribute("cercato", true);
+			ArrayList<ProductBean> prodotti;
+			try {
+				prodotti = pd.getProductListByName(nomeprodotto);
+				if(prodotti!=null) {
+					request.setAttribute("prodotti", prodotti);
+					request.setAttribute("cercato", true);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			
 		}
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("menu.jsp");
 		requestDispatcher.forward(request, response);
