@@ -78,6 +78,7 @@
   				<button onclick="hideandshow('hidden_element_panino')" class="pulsante">Aggiungi Panino</button>
   				<button onclick="hideandshow('hidden_element_bibita')" class="pulsante">Aggiungi Birra</button>
   				<button onclick="hideandshow('hidden_element_stuzzicheria')" class="pulsante">Aggiungi Stuzzicheria</button>
+				<button onclick="hideandshow('hidden_element_news')" class="pulsante">Aggiungi Notizia</button>
   			</div>
     		<fieldset id="hidden_element_panino" style="display:none">
   				<legend>Aggiungi panino al menu</legend>
@@ -177,6 +178,33 @@
        				</div>
        				
        				<div class="inputfield">
+        				<input type="submit" value="invia" class="pulsante" >
+     	 			</div>
+       			</form>
+			</fieldset>
+			
+			<fieldset id="hidden_element_news" style="display:none">
+  				<legend>Aggiungi notizia alla home</legend>
+  				<form class="form" action="AddNew" method="POST" enctype="multipart/form-data">
+       				<div class="inputfield">
+          				<label>Titolo</label>
+          				<input type="text" class="input" name="titolo" id="nome" required>
+          				<input type="text" class="input" name="username" value="<%= u.getUsername() %>" 
+          				style="display: none">          				
+       				</div> 
+       
+       				<div class="inputfield">
+          				<label>Corpo</label>
+          				<textarea class="input" name="corpo" id="descrizione" required></textarea>
+       				</div>	    
+       				
+       				<div class="inputfield">
+       					<label>Immagine</label>
+       					<input class="file" type="file" name="foto">
+       				</div>				
+       				
+       				<div class="inputfield">
+       					
         				<input type="submit" value="invia" class="pulsante" >
      	 			</div>
        			</form>

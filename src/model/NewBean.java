@@ -3,8 +3,16 @@ package model;
 public class NewBean {
 	
 	private int id;
-	private String titolo, corpo, dataora, username;
+	private String titolo, corpo, dataora, username, image;
 	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	public NewBean() {
 		id=0;
 		titolo=corpo=dataora=username=null;

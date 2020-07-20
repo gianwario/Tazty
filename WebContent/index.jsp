@@ -40,7 +40,7 @@
 </head>
 <body
 	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
-	onload="slide();" onscroll="scrollFunction();">
+	onload="slide(); newsLoading();" onscroll="scrollFunction();">
 
 
 	<div id="navbar">
@@ -129,45 +129,49 @@
 		</div>
 		<div class="news-wrapper">
 			<div class="news-container">
-				<a class="project" href="#">
+				<a class="project">
 					<figure>
-						<img src="images/01.jpg" alt="Spain building">
+						<div id="pic1">
+						<img src="images/01.jpg" alt="Spain building"></div>
 						<figcaption>
 							<div>
-								<h3>The City</h3>
-								<p class="desc_news">View project</p>
+								<h3 id="news-name1">--</h3>
+								<p class="desc_news" id="news-body1">body</p>
 							</div>
 						</figcaption>
 					</figure>
-				</a> <a class="project" href="#">
+				</a> <a class="project">
 					<figure>
+					<div id="pic2">
 						<img src="images/02.jpg" alt="a Kiwi, lime, pear"
-							title="Juicy Fruit">
+							title="Juicy Fruit"></div>
 						<figcaption>
 							<div>
-								<h3>Juicy Fruit</h3>
-								<p class="desc_news">View project</p>
+								<h3 id="news-name2">--</h3>
+								<p class="desc_news" id="news-body2">body</p>
 							</div>
 						</figcaption>
 					</figure>
-				</a> <a class="project" href="#">
+				</a> <a class="project">
 					<figure>
+					<div id="pic3">
 						<img src="images/04.jpg" alt="Yellow roller coaster track"
-							title="Roller Track">
+							title="Roller Track"></div>
 						<figcaption>
 							<div>
-								<h3>Roller Track</h3>
-								<p class="desc_news">View project</p>
+								<h3 id="news-name3">--</h3>
+								<p class="desc_news" id="news-body3">body</p>
 							</div>
 						</figcaption>
 					</figure>
-				</a> <a class="project" href="#">
+				</a> <a class="project">
 					<figure>
-						<img src="images/05.jpg" alt="Yellow play balls" title="Yellow">
+					<div id="pic4">
+						<img src="images/05.jpg" alt="Yellow play balls" title="Yellow"></div>
 						<figcaption>
 							<div>
-								<h3>Yellow</h3>
-								<p class="desc_news">View project</p>
+								<h3 id="news-name4">--</h3>
+								<p class="desc_news" id="news-body4">body</p>
 							</div>
 						</figcaption>
 					</figure>
@@ -266,6 +270,35 @@
       			}
     		}
   		}
+	}
+</script>
+
+<script> 
+	function newsLoading() {		
+		var xmlHttpReq = new XMLHttpRequest();
+		
+		xmlHttpReq.responseType = 'json';
+		xmlHttpReq.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				
+				var titles = [ document.getElementById('news-name1'), document.getElementById('news-name2'),
+					document.getElementById('news-name3'), document.getElementById('news-name4')];
+				var bodies = [ document.getElementById('news-body1'), document.getElementById('news-body2'),
+					document.getElementById('news-body3'), document.getElementById('news-body4')];
+				var pics = [ document.getElementById('pic1'), document.getElementById('pic2'),
+					document.getElementById('pic3'), document.getElementById('pic4')];
+				for(var i = 0; i<4; i++) {
+					
+					titles[i].innerHTML = this.response[i].titolo;
+					bodies[i].innerHTML = "Da:  " + this.response[i].username + " alle: " +
+						this.response[i].dataora + "<br>" + this.response[i].corpo;
+					pics[i].innerHTML = '<img src="data:image/jpg;base64,' + this.response[i].foto + '">'
+				}
+			}
+		}
+		
+		xmlHttpReq.open("GET", "News", true);
+		xmlHttpReq.send();
 	}
 </script>
 	
