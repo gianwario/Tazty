@@ -1,0 +1,93 @@
+table {
+	border-spacing: 1;
+	border-collapse: collapse;
+	background: white;
+	overflow: hidden;
+	width: 70%;
+	margin: 0 auto;
+	position: relative; 
+	margin-bottom:3%;
+	border: 1px solid #ffd801;
+	margin-top:3%;
+}
+
+th {
+	padding-left: 8px;
+	background-color:#76e6de;
+	height: 4rem;
+}
+
+td {
+	padding-left: 8px;
+	text-align:center;
+	height: 4rem;
+}
+
+thead{
+	height: 60px;
+	background: #FFED86;
+	font-size: 16px;
+}
+
+tbody{
+	height:4rem;
+	border-bottom: 1px solid #ffd801;
+	
+}
+
+.vuoto{
+	background-color:white;
+	margin-bottom:2%;
+}
+
+.totale{
+	padding: 1%;
+	background-color:#ffd801;
+}
+
+
+.title{
+	width: 15%;
+	text-align:center;
+    font-size:40px;
+    color:#ffd801;
+    border-bottom: 2px solid #76d6de;
+    display: inline-block;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.titlecontainer {
+  padding-top: 4%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+	.title{
+		width:100%;
+		border-bottom:none;
+	}
+	table{
+		width:90%;
+	}
+	.info{
+		padding-bottom: 2%;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px){
+	.title{
+		width:100%;
+		border-bottom:none;
+	}
+	table{
+		width:90%;
+	}
+	.info{
+		padding-bottom: 2%;
+	}
+	.info_admin{
+		font-size:14px;
+	}
+}

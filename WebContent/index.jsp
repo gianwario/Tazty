@@ -64,7 +64,7 @@
 					} else {
 					UserBean u = (UserBean) request.getSession().getAttribute("utente");
 				%>
-				<a id="logout" href="Logout">Logout</a> <a href="#">Profilo</a>
+				<a id="logout" href="Logout">Logout</a> <a href="User?username=<%= u.getUsername() %>">Profilo</a>
 				<%
 					if (u.getIsadmin() == 1) {
 				%>
