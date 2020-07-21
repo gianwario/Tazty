@@ -51,8 +51,6 @@
 		</div>
 		
 		<div class="sbrody">
-			<div id="filters-container">
-			</div>
 			<% if(request.getAttribute("cercato")==null){ %>
 			<div id="menus">
 				<fieldset>

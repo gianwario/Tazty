@@ -60,8 +60,8 @@ public class CarrelloCustom extends HttpServlet {
 		}
 		carrello.add(pb);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
-		rd.forward(request, response);
+		response.sendRedirect("cart.jsp");
+
 			
 	}
 

@@ -124,21 +124,14 @@
 	
 }
 
-#filters-container{
-	position: fixed;
-	left:0;
-	width: 25%;
-	height: 70%;
-	border: 2px solid black;
-}
+
 
 .sbrody {
 	width: 100%;
-	margin-top: 10%;
+	margin-top: 15%;
 	display: flex; 
 	flex-direction: row;
 }
-
 
 
 .griglia {
@@ -269,8 +262,8 @@
 }
 
 fieldset {
-	width: 75%;
-	margin-left: 25%;
+	width: 90%;
+	margin-left: 5%;
 	margin-bottom: 5%;
 	border: 5px dashed #76d6de;
 	border-radius: 10px;
@@ -284,15 +277,34 @@ legend{
 
 @media only screen and (max-width: 800px){
 	.griglia {
-	display: grid;
-	grid-template-columns: auto auto;
-	padding: 10px;
-}
+		display: grid;
+		grid-template-columns: auto auto;
+		padding: 10px;
+	
+	}
+	.home_redirect {
+		margin-top: 1%;
+		width: 30%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	menus {
+		margin-top:18%;
+	}
 }
 @media only screen and (max-width: 600px){
 	.griglia {
-	display: grid;
-	grid-template-columns: auto;
-	padding: 10px;
-}
+		display: grid;
+		grid-template-columns: auto;
+		padding: 10px;
+	}
+	.home_redirect {
+		margin-top: 1%;
+		width: 30%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	#menus {
+		margin-top:18%;
+	}
 }

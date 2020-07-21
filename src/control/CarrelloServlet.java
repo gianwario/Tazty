@@ -59,8 +59,7 @@ public class CarrelloServlet extends HttpServlet {
 
 
 		
-		RequestDispatcher rd = request.getRequestDispatcher("Menu");
-		rd.forward(request, response);
+		response.sendRedirect("Menu");
 	}
 
 }

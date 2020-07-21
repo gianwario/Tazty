@@ -68,7 +68,6 @@
 						<p>
 							<strong><%=prodotto.getDescrizione()%></strong>
 						</p>
-						<p id="codice"><%= prodotto.getCod_prodotto() %></p>
 					</div>
 				</div>
 				<div class="price"><%= prodotto.getPrezzo() %></div>

@@ -203,7 +203,8 @@
 	<button type="submit" id="confirm">
 		<i class="fa fa-shopping-cart" aria-hidden="true"
 			style="margin-right: 10px;"></i>Aggiungi al carrello
-	</button></form>
+	</button>
+	</form>
 	
 	<!-- FOOTER -->
 	<div class="footer">

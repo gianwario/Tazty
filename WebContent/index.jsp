@@ -59,12 +59,12 @@
 				<%
 					if (request.getSession().getAttribute("utente") == null) {
 				%>
-				<a href="login.html">Login</a> <a href="register.html">Registrati</a>
+				<a href="login.html">Login</a> <a href="register.html">Registrati</a> <a href="cart.jsp">Carrello</a>
 				<%
 					} else {
 					UserBean u = (UserBean) request.getSession().getAttribute("utente");
 				%>
-				<a id="logout" href="Logout">Logout</a> <a href="User?username=<%= u.getUsername() %>">Profilo</a>
+				<a id="logout" href="Logout">Logout</a> <a href="User?username=<%= u.getUsername() %>">Profilo</a> <a href="cart.jsp">Carrello</a>
 				<%
 					if (u.getIsadmin() == 1) {
 				%>
