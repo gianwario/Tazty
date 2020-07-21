@@ -1,8 +1,6 @@
 package control;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,22 +8,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import model.OrdineBean;
-import model.OrdineDAO;
-
+import model.Carrello;
+import model.ProductBean;
 
 /**
- * Servlet implementation class Menu
+ * Servlet implementation class CarrelloRimuovi
  */
-@WebServlet("/User")
-public class User extends HttpServlet {
+@WebServlet("/CarrelloRimuovi")
+public class CarrelloRimuovi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public User() {
+    public CarrelloRimuovi() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,22 +33,12 @@ public class User extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		OrdineDAO pd = new OrdineDAO();
-		
-		RequestDispatcher requestDispatcher = null;
-		String username = request.getParameter("username");
-		System.out.println(username);
-		try {
-			ArrayList<OrdineBean> pb = pd.getOrdineList(username);
-			request.setAttribute("ordini", pb);
-			requestDispatcher = request.getRequestDispatcher("user.jsp");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		requestDispatcher.forward(request, response);		
-
-		
+		String cod = request.getParameter("cod");
+		HttpSession session = request.getSession();
+		Carrello carrello = (Carrello) session.getAttribute("carrello");
+		carrello.remove(Integer.parseInt(cod));
+		RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
@@ -58,7 +46,7 @@ public class User extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request,response);
+		doGet(request, response);
 	}
 
 }

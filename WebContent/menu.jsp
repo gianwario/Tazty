@@ -46,7 +46,7 @@
 					</form>
 			</div>
 			<div id="order">
-				<a href="#" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello</a>
+				<a href="cart.jsp" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello</a>
 			</div>
 		</div>
 		
@@ -140,7 +140,10 @@
 							<p class="descrizione"><%= b.getDescrizione() %></p>
 							<p class="prezzo">€ <%= b.getPrezzo() %></p>
 							<div>
-								<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								<form action="<%= response.encodeURL("CarrelloServlet") %>" method="POST">
+									<input type="text" value="<%= b.getCod_prodotto() %>" name="codice" style="display:none">
+									<button class="carrellobutton"><i class="fa fa-shopping-cart" style="margin-right: 5%;"></i>Aggiungi al carrello</button>
+								</form>							
 							</div>
 						</div>
 					<% } %>

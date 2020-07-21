@@ -29,57 +29,57 @@
 <script src="js/cart.js"></script>
 </head>
 <body>
+	<h1><a href="Menu">Torna al menu</a></h1>
 	<%
 		Carrello carrello = (Carrello) request.getSession().getAttribute("carrello");
-
-	if (carrello == null || carrello.getprodotto().isEmpty()) {
+		float subTotal = 0;
+		if (carrello == null || carrello.getprodotto().isEmpty()) {
 	%>
 	<h1 style="text-align:center;color:red;font-size:20px;">Carrello vuoto</h1>
 	<%
 		} else {
 		ArrayList<ProductBean> prodotti = carrello.getprodotto();
+		
 	%>
 
-
+	
 	<div class="row">
 		<div class="basket">
 			<div class="basket-labels">
 				<ul>
 					<li class="item item-heading">Articolo</li>
 					<li class="price">Prezzo</li>
-					<li class="quantity">Quantitá</li>
-					<li class="subtotal">Totale</li>
+					
 				</ul>
 			</div>
-			<%
-				for (ProductBean prodotto : prodotti)
-				if (prodotto != null) {
+			<%	
+				for (ProductBean prodotto : prodotti){
+					if (prodotto != null) {
+
+						subTotal+=prodotto.getPrezzo();
 			%>
 
 			<div class="basket-product">
 				<div class="item">
 					<div class="product-details">
 						<h1 class="item-title">
-							<strong><span>QUANTITÁ QUI</span> <%=prodotto.getNome()%></strong>
+							<strong><%=prodotto.getNome()%></strong>
 						</h1>
 						<p>
-							<strong>DESCRIZIONE QUI</strong>
+							<strong><%=prodotto.getDescrizione()%></strong>
 						</p>
-						<p>CODICE PRODOTTO QUI</p>
+						<p id="codice"><%= prodotto.getCod_prodotto() %></p>
 					</div>
 				</div>
-				<div class="price">22</div>
-				<div class="quantity">
-					<input type="number" value="4" min="1" class="quantity-field">
-				</div>
-				<div class="subtotal">TOTALE</div>
+				<div class="price"><%= prodotto.getPrezzo() %></div>
 				<div class="remove">
-					<button>Rimuovi</button>
+					<a href="CarrelloRimuovi?cod=<%= prodotto.getCod_prodotto()%>">Rimuovi</a>
 				</div>
 			</div>
 			<%
+					}
 				}
-			}
+			
 			%>
 
 		</div>
@@ -90,24 +90,47 @@
 
 	<div class="row2">
 		<div class="summary">
-			<div class="summary-total-items">
-				<span class="total-items"></span> Articoli nel carrello
-			</div>
+
 			<div class="summary-subtotal">
 				<div class="subtotal-title">Sub-Totale</div>
 				<div class="subtotal-value final-value" id="basket-subtotal">
-					Sub TOTALE QUI</div>
+					<%= subTotal %></div>
+			</div>
+			
+			<div class="summary-subtotal">
+				<div class="subtotal-title">Spese di spedizione</div>
+				<div class="subtotal-value final-value" id="basket-subtotal">
+					5</div>
 			</div>
 
 			<div class="summary-total">
 				<div class="total-title">Totale</div>
-				<div class="total-value final-value" id="basket-total">130.00</div>
+				<div class="total-value final-value" id="basket-total"><%= subTotal + 5 %></div>
 			</div>
 			<div class="summary-checkout">
 				<button class="checkout-cta">Procedi all'ordine</button>
 			</div>
 		</div>
 	</div>
+	<%} %>
+	
+	<script>
+		$('.remove a').click(function() {
+		  removeItem(this);
+		});
+
+		/* Remove item from cart */
+		function removeItem(removeButton) {
+		  /* Remove row from DOM and recalc cart total */
+		  var productRow = $(removeButton).parent().parent();
+		  productRow.slideUp(300, function() {
+		    productRow.remove();
+		  });
+
+		}
+
+
+	</script>
 </body>
 
 </html>

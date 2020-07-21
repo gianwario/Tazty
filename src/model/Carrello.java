@@ -9,11 +9,11 @@ public class Carrello {
 		prodotto = new ArrayList<>();
 	}
 	public void remove(int codice) {
-		Iterator<ProductBean> iterator = prodotto.iterator();
-		while(iterator.hasNext()) {
-			ProductBean pr = iterator.next();
-			if(pr.getCod_prodotto()==codice)
-				iterator.remove();
+		for(ProductBean p : prodotto) {
+			if(p.getCod_prodotto() == codice) {
+				prodotto.remove(p);
+				return;
+			}
 		}
 	}
 	public ArrayList<ProductBean> getprodotto() {

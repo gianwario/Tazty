@@ -52,13 +52,14 @@ public class CarrelloServlet extends HttpServlet {
 		if(carrello == null) {
 			carrello = new Carrello();
 			session.setAttribute("carrello", carrello);
+			session.setMaxInactiveInterval(3600);
 		}
 		carrello.add(prodotto);
 		
 
 
 		
-		RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("Menu");
 		rd.forward(request, response);
 	}
 
