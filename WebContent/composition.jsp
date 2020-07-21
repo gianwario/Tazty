@@ -31,7 +31,7 @@
 			<div class="title">Componi qui il tuo panino</div>
 			<div class="subtitle">
 				Visita anche il nostro <a
-					href="https://www.youtube.com/watch?v=FzG4uDgje3M" target="blank"
+					href="Menu"
 					id="menu">menù</a>!
 			</div>
 		</div>
