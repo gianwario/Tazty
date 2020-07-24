@@ -323,6 +323,7 @@
 		}
 
 		function breadComposer() {
+
 			var e1 = document.getElementById("bread-select");
 			var p1 = (e1.options[e1.selectedIndex].text);
 			var string1 = '<img src="images/composition-pic/' + p1 + '-top.PNG">';
@@ -353,6 +354,53 @@
 			else
 				$("#add2-pic").html(string);
 		}
+		
+		
+		$(document).ready(function(){
+			
+			var observer1 = new MutationObserver(function(e) {
+				$('#carne-pic').css("display","none");
+				$('#carne-pic').fadeIn("slow");
+			});
+			observer1.observe($('#carne-pic')[0], {characterData: true, childList: true});
+			
+			
+			var observer2 = new MutationObserver(function(e) {
+				$('#pane-top-pic').css("display","none");
+				$('#pane-top-pic').slideDown("slow");
+			});
+			observer2.observe($('#pane-top-pic')[0], {characterData: true, childList: true});
+			
+			
+			var observer3 = new MutationObserver(function(e) {
+				$('#salsa-pic').css("display","none");
+				$('#salsa-pic').fadeIn("slow");
+			});
+			observer3.observe($('#salsa-pic')[0], {characterData: true, childList: true});
+			
+			
+			var observer4 = new MutationObserver(function(e) {
+				$('#add1-pic').css("display","none");
+				$('#add1-pic').fadeIn("slow");
+			});
+			observer4.observe($('#add1-pic')[0], {characterData: true, childList: true});
+			
+			
+			var observer5 = new MutationObserver(function(e) {
+				$('#add2-pic').css("display","none");
+				$('#add2-pic').fadeIn("slow");
+			});
+			observer5.observe($('#add2-pic')[0], {characterData: true, childList: true});
+			
+			
+			var observer6 = new MutationObserver(function(e) {
+				$('#pane-bottom-pic').css("display","none");
+				$('#pane-bottom-pic').slideDown("slow");
+			});
+			observer6.observe($('#pane-bottom-pic')[0], {characterData: true, childList: true});
+			
+			
+		});
 	</script>
 
 </body>
