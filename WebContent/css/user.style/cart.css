@@ -90,6 +90,7 @@ input, button, .basket, .basket-module, .basket-labels, .item, .price,
 
 .basket {
 	margin-bottom:5%;
+	width:100%;
 }
 
 .basket-module {
