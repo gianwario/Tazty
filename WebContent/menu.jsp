@@ -45,8 +45,9 @@
 						<datalist id="ricerca-datalist"></datalist>
 					</form>
 			</div>
+			<% Carrello c = (Carrello)session.getAttribute("carrello"); %>
 			<div id="order">
-				<a href="cart.jsp" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello</a>
+				<a href="cart.jsp" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello <%if(c!=null){ %>(<%= c.getprodotto().size() %>)<%} %></a>
 			</div>
 		</div>
 		

@@ -57,6 +57,8 @@ public class CarrelloCustom extends HttpServlet {
 		if(carrello == null) {
 			carrello = new Carrello();
 			session.setAttribute("carrello", carrello);
+			session.setMaxInactiveInterval(3600);
+
 		}
 		carrello.add(pb);
 		
