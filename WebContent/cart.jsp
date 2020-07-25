@@ -29,7 +29,10 @@
 <script src="js/cart.js"></script>
 </head>
 <body>
-	<h1><a href="Menu">Torna al menu</a></h1>
+	<div class="back">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<a href="Menu">Torna al menu</a>
+	</div>
 	<%
 		Carrello carrello = (Carrello) request.getSession().getAttribute("carrello");
 		float subTotal = 0;

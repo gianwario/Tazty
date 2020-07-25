@@ -318,6 +318,13 @@ aside {
 	font-size:18px;
 }
 
+.back,.back a:hover{
+	color:#ffd801;
+	font-weight:bold;
+	font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+}
+
 @media screen and (max-width: 640px) {
 	aside, .basket, .summary, .item, .remove {
 		width: 100%;

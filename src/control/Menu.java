@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.BirraBean;
 import model.BirraDAO;
-import model.IngredientBean;
-import model.IngredientDAO;
 import model.PaninoBean;
 import model.PaninoDAO;
 import model.StuzzicheriaBean;

@@ -132,7 +132,7 @@
 				<a class="project">
 					<figure>
 						<div id="pic1">
-						<img src="images/01.jpg" alt="Spain building"></div>
+						<img src="images/news_blank.png" alt="Notizia 1"></div>
 						<figcaption>
 							<div>
 								<h3 id="news-name1">--</h3>
@@ -143,8 +143,7 @@
 				</a> <a class="project">
 					<figure>
 					<div id="pic2">
-						<img src="images/02.jpg" alt="a Kiwi, lime, pear"
-							title="Juicy Fruit"></div>
+						<img src="images/news_blank.png" alt="Notizia 2"></div>
 						<figcaption>
 							<div>
 								<h3 id="news-name2">--</h3>
@@ -155,8 +154,7 @@
 				</a> <a class="project">
 					<figure>
 					<div id="pic3">
-						<img src="images/04.jpg" alt="Yellow roller coaster track"
-							title="Roller Track"></div>
+						<img src="images/news_blank.png" alt="Notizia 3"></div>
 						<figcaption>
 							<div>
 								<h3 id="news-name3">--</h3>
@@ -167,7 +165,7 @@
 				</a> <a class="project">
 					<figure>
 					<div id="pic4">
-						<img src="images/05.jpg" alt="Yellow play balls" title="Yellow"></div>
+						<img src="images/news_blank.png" alt="Notizia 4"></div>
 						<figcaption>
 							<div>
 								<h3 id="news-name4">--</h3>
@@ -198,8 +196,7 @@
 							<i class="fa fa-envelope-o"> </i> v.pentangelo4@studenti.unisa.it
 						</p>
 						<p class="strong">
-							<i class="fa fa-map-marker"> </i> Somma Vesuviana, bocca del
-							vesuvio (NA)
+							<i class="fa fa-map-marker"> </i> Somma Vesuviana, Via Milano 23(NA)
 						</p>
 					</div>
 					<h2>Orari</h2>
