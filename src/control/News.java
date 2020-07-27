@@ -13,7 +13,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.google.gson.Gson;
 
 import model.NewDAO;
 import model.NewBean;
@@ -47,7 +46,6 @@ public class News extends HttpServlet {
 		// TODO Auto-generated method stub
 		JSONArray newsJson = new JSONArray();
 		NewDAO dao = new NewDAO();
-		
 		ArrayList<NewBean> list = dao.getLatestNews();		
 		try {
 			

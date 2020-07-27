@@ -8,7 +8,7 @@
 <html>
 
 <head>
-<title>Admin</title>
+<title>User</title>
 <meta charset="UTF-8">
 <link
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"

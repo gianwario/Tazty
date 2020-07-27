@@ -62,7 +62,7 @@
 					for(PaninoBean p : panini2) {
 					%>
 						<div class="card">
-							<h1><img src="images/Paninoshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Menu/Paninoshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= p.getNome() %></h1>
 							<p class="descrizione"><%= p.getDescrizione() %></p>
 							<p class="descrizione">Tipo pane: <%= p.getTipo() %></p>
@@ -85,7 +85,7 @@
 					for(StuzzicheriaBean s : stuzzicherie) {
 					%>
 						<div class="card">
-							<h1><img src="images/Patatineshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Menu/Patatineshopping.jpg" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= s.getNome() %></h1>
 							<p class="descrizione"><%= s.getDescrizione() %></p>
 							<p class="descrizione">Tipo: <%= s.getTipo() %></p>
@@ -108,7 +108,7 @@
 					for(BirraBean b : birre) {
 					%>
 						<div class="card">
-							<h1><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Menu/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= b.getNome() %></h1>
 							<p class="descrizione"><%= b.getDescrizione() %></p>
 							<p class="descrizione">Colore: <%= b.getColore() %></p>
@@ -134,7 +134,7 @@
 					for(ProductBean b : prodotti) {
 					%>
 						<div class="card">
-							<h1><img src="images/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
+							<h1><img src="images/Menu/Beershopping.png" style="width: 40%; padding-top:2%;"></h1>
 							<h1 class="nome_prodotto"><%= b.getNome() %></h1>
 							<p class="descrizione"><%= b.getDescrizione() %></p>
 							<p class="prezzo">€ <%= b.getPrezzo() %></p>

@@ -89,7 +89,7 @@ fieldset{
 
 .column_right .form .inputfield .input,
 .column_right .form .inputfield .textarea{
-  width: 100%;
+  width: 100%!important;
   outline: none;
   border: 1px solid #494743;
   font-size: 15px;

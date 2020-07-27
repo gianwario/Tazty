@@ -200,7 +200,7 @@
        				
        				<div class="inputfield">
        					<label>Immagine</label>
-       					<input class="file" type="file" name="foto">
+       					<input class="file" type="file" name="foto" required>
        				</div>				
        				
        				<div class="inputfield">

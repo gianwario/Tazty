@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Carrello {
 	private ArrayList<ProductBean> prodotto;
