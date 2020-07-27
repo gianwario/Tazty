@@ -29,7 +29,7 @@
 <script src="js/cart.js"></script>
 </head>
 <body>
-	<h1><a href="Menu">Torna al menu</a></h1>
+	<h1><a href="Menu"><button id="menu-button">Torna al menù</button></a></h1>
 	<%
 		Carrello carrello = (Carrello) request.getSession().getAttribute("carrello");
 		float subTotal = 0;
@@ -106,8 +106,9 @@
 				<div class="total-title">Totale</div>
 				<div class="total-value final-value" id="basket-total"><%= subTotal + 5 %></div>
 			</div>
-			<div class="summary-checkout">
-				<button class="checkout-cta">Procedi all'ordine</button>
+			<div class="summary-checkout">			
+				<a href="complete-order.jsp"> 
+				<button class="checkout-cta" type="submit">Procedi all'ordine</button></a>
 			</div>
 		</div>
 	</div>

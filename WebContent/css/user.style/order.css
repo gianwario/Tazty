@@ -1,0 +1,125 @@
+@charset "utf-8";
+html, html a {
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+body {
+	background-color: #76e6de;
+	color: #666;	
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+	
+}
+
+#confirmation {
+	height: 40px;
+	width: 50%;
+	background-color: #ffd801;
+	margin-left: 25%;
+	margin-top: 3%;
+	text-align: center;
+	padding-top: 1%;
+}
+
+#confirmation span {
+	
+	font-size: 24px;
+	color: black;
+}
+
+#user-infos {
+	background-color: white;
+	border: 2px solid #ffd801;
+	padding: 4rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: 25%;
+	width: 50%;	
+}
+
+.infos {	
+	margin-bottom: 5%;
+	font-size: 18px;
+	border-top: 1px solid #ffd801;
+    border-bottom: 1px solid #ffd801;
+    padding: 0.5rem 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-name {
+	
+	font-size: 30px;
+	margin-bottom: 10px;
+	color: black;
+	margin-bottom: 5%;
+}
+
+.fields {
+	
+	margin-left: 6%;
+	border: 1px solid #bcbcbc;
+	height: 30px;
+	width: 55%;
+	border-radius: 6px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	text-align: right;
+	
+}
+
+#payment {
+	
+	flex-direction: row;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	padding: 1% 0;
+}
+
+.payments-sons {
+	
+	height: 25%;
+	width: 25%;
+	
+	
+}
+
+.payments-sons img{
+	
+	margin-top: 2%;
+	max-height: 100%;
+	width: 100%;
+}
+
+#submit {
+	display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 100%;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    margin-top: 10%;	
+}
+
+@media screen and (max-width: 800px){
+	
+	#payment {
+		flex-direction: column;
+	}
+	.infos {
+		flex-direction: column;
+	}
+	
+	#confirmation span {
+		font-size: 20px;
+	}
+}

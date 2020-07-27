@@ -29,6 +29,11 @@ thead{
 	font-size: 16px;
 }
 
+tr{
+	border-bottom: 1px solid #ffd801;
+	
+}
+
 tbody{
 	height:4rem;
 	border-bottom: 1px solid #ffd801;
@@ -36,7 +41,7 @@ tbody{
 }
 
 .vuoto{
-	background-color:white;
+	background-color: #ffd801;
 	margin-bottom:2%;
 }
 

@@ -318,6 +318,22 @@ aside {
 	font-size:18px;
 }
 
+#menu-button {
+	
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 5%;
+	width: 8%;
+	font-size: 15px;
+	background-color: #ffd801;
+	color: black;
+}
+
+#menu-button:hover {
+	color: white;
+}
+
 @media screen and (max-width: 640px) {
 	aside, .basket, .summary, .item, .remove {
 		width: 100%;

@@ -3,7 +3,9 @@ package model;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class OrdineDAO {
 
@@ -48,6 +50,46 @@ public class OrdineDAO {
 			// TODO: handle exception
 		}
 		return null;
+	}
+	
+	public void doSave(OrdineBean ordine) throws SQLException{
+		
+		ConnectionPool cp = new ConnectionPool();
+		java.sql.Connection con=null;
+		try {
+			con = cp.getConnection();
+		} catch (SQLException e) { e.printStackTrace(); }
+		
+		PreparedStatement ps = con.prepareStatement("INSERT INTO ordine(totale, data_ora, pagamento, username) \r\n" + 
+				"VALUES (\r\n" + "	?, ?, ?, ?\r\n" + ");");
+		java.util.Date date = new Date();
+		Object param = new java.sql.Timestamp(date.getTime());		
+		
+		ps.setDouble(1, ordine.getTotale());
+		ps.setObject(2, param);
+		ps.setString(3, ordine.getPagamento());
+		ps.setString(4, ordine.getUsername());
+		
+		ps.execute();
+		
+	}
+	
+	public int getLastOrder() throws SQLException {
+		int count = 0;
+		ConnectionPool cp = new ConnectionPool();
+		java.sql.Connection con=null;
+		try {
+			con = cp.getConnection();
+		} catch (SQLException e) { e.printStackTrace(); }
+		
+		String query = "SELECT cod_ordine FROM ordine\r\n" + "ORDER BY cod_ordine DESC;";
+		Statement stmt3 = con.createStatement();
+		ResultSet rs3 = stmt3.executeQuery(query);
+		if(rs3.next()){
+		    count = rs3.getInt(1);
+		    }
+		return count;
+		
 	}
 
 	/*

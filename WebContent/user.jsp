@@ -56,7 +56,7 @@ if (request.getSession().getAttribute("utente") == null) {%>
 		<div class="column_left">
 			<div id="home_redirect">
 				<a href="index.jsp" title="Ritorna alla home"> <img
-					src="images/logo-scritta.png" alt="Torna alla home" width="40%">
+					src="images/logo2.png" alt="Torna alla home" width="40%">
 				</a>
 			</div>
 			<div class="info_admin">
@@ -76,8 +76,9 @@ if (request.getSession().getAttribute("utente") == null) {%>
 			</div>
 			<%
 				ArrayList<OrdineBean> ordin = (ArrayList<OrdineBean>) request.getAttribute("ordini");
-
+				
 			for (OrdineBean o : ordin) {
+				double totOrdine = o.getTotale();
 			%>
 			<table id="ordini_tab">
 				<thead>
@@ -89,18 +90,30 @@ if (request.getSession().getAttribute("utente") == null) {%>
 						<th></th>
 					</tr>
 				</thead>
+				<tbody>
 				<%
 					ArrayList<ProductBean> prod = (ArrayList<ProductBean>) o.getProductList();
+				double sum = 5;
 				for (ProductBean p : prod) {
+					sum+=p.getPrezzo();
 				%>
-				<tbody>
+				
 					<tr>
 						<td><strong>Nome prodotto</strong></td>
 						<td><%=p.getNome()%></td>
 						<td><strong>Prezzo prodotto</strong></td>
 						<td><%=p.getPrezzo()%></td>
 					</tr>
-					<%}%>
+					<%}
+					if(sum!=totOrdine){
+					%>
+					<tr>
+						<td><strong>Prodotti personalizzati</strong></td>
+						<td> </td>
+						<td><strong>Prezzo</strong></td>
+						<td>--</td>
+					</tr>
+					<%} %>
 					<tr>
 						<th class="vuoto"></th>
 						<th class="vuoto"></th>

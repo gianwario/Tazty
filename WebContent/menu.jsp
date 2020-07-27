@@ -32,7 +32,7 @@
 		<div class="header">
 			<div class="home_redirect">
 		  		<a href="index.jsp" title="Ritorna alla home">
-		  		<img src="images/logo2.png" alt="Torna alla home" width="100%" height="80%">
+		  		<img src="images/logo2.png" alt="Torna alla home" width="100%" height="90%">
 		  		</a>
 		  	</div>
 		  	<div class="wrap">

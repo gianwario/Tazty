@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.OrdineBean;
 import model.OrdineDAO;
+import model.ProductBean;
+import model.RelativoADAO;
 
 
 /**
@@ -36,19 +38,27 @@ public class User extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		OrdineDAO pd = new OrdineDAO();
+		RelativoADAO rdao = new RelativoADAO();
+		ArrayList<ProductBean> list = new ArrayList<ProductBean>();
 		
 		RequestDispatcher requestDispatcher = null;
 		String username = request.getParameter("username");
 		System.out.println(username);
 		try {
 			ArrayList<OrdineBean> pb = pd.getOrdineList(username);
+			
+			for(OrdineBean o : pb) {				
+				list = rdao.getProdottibyCodOrdine(o.getCod_ordine());
+				o.setProductList(list);
+			}
+			
 			request.setAttribute("ordini", pb);
 			requestDispatcher = request.getRequestDispatcher("user.jsp");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		requestDispatcher.forward(request, response);		
+			requestDispatcher.forward(request, response);	
+		} 
+		catch (SQLException e) { e.printStackTrace(); }
+		
+			
 
 		
 	}

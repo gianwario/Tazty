@@ -7,6 +7,7 @@ public class OrdineBean {
 	private String data_ora,pagamento;
 	private int cod_ordine;
 	private double totale;
+	private String username;
 	private ArrayList<ProductBean> pb;
 	
 	public OrdineBean() {
@@ -15,7 +16,16 @@ public class OrdineBean {
 		data_ora= "";
 		totale= 0;
 		pagamento="";
+		username="";
 		pb= new ArrayList<ProductBean>();
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getData_ora() {
@@ -55,6 +65,9 @@ public class OrdineBean {
 		return pb;
 	}
 	
+	public void setProductList(ArrayList<ProductBean> list) {
+		pb = list;		
+	}
 	public void addProduct(ProductBean p){
 		pb.add(p);
 	}
