@@ -52,7 +52,7 @@ public class Ricerca extends HttpServlet {
 			}
 			
 		}
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("menu.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher(response.encodeURL("menu.jsp"));
 		requestDispatcher.forward(request, response);
 	}
 

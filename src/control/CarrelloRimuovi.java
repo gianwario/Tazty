@@ -37,7 +37,7 @@ public class CarrelloRimuovi extends HttpServlet {
 		HttpSession session = request.getSession();
 		Carrello carrello = (Carrello) session.getAttribute("carrello");
 		carrello.remove(Integer.parseInt(cod));
-		RequestDispatcher rd = request.getRequestDispatcher("cart.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher(response.encodeURL("cart.jsp"));
 		rd.forward(request, response);
 	}
 

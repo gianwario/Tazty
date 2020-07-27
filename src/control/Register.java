@@ -67,14 +67,14 @@ public class Register extends HttpServlet {
 		try {
 			if (uDao.check(utente.getUsername())) {
 				System.out.println("L'utente esiste gia.");
-				requestDispatcher = request.getRequestDispatcher("register.html");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("register.html"));
 			}
 
 			else {
 				uDao.doSave(utente);
 				request.getSession().setAttribute("utente", utente);
 				request.getSession().setMaxInactiveInterval(60);
-				requestDispatcher = request.getRequestDispatcher("index.jsp");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("index.jsp"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

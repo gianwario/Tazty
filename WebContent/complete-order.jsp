@@ -36,7 +36,7 @@
 	  	<div class="infos"> 
 	  		<span>Importo totale:</span> <span style= "font-size: 22px"> <b>€<%=sum%></b> </span>
 	  	</div>
-	  	<form action="CompletaOrdine" method="POST">
+	  	<form action=<%= response.encodeURL("CompletaOrdine")%> method="POST">
 	  	<div> Seleziona metodo di pagamento: </div>
 	  		<div id="payment">		  			
 	  			<div class="payments-sons"> 

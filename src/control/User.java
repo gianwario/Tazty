@@ -53,7 +53,7 @@ public class User extends HttpServlet {
 			}
 			
 			request.setAttribute("ordini", pb);
-			requestDispatcher = request.getRequestDispatcher("user.jsp");
+			requestDispatcher = request.getRequestDispatcher(response.encodeURL("user.jsp"));
 			requestDispatcher.forward(request, response);	
 		} 
 		catch (SQLException e) { e.printStackTrace(); }

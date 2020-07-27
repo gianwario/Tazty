@@ -54,7 +54,7 @@ public class Composition extends HttpServlet {
 			request.setAttribute("carne", listcarne);
 			request.setAttribute("condimento", listcondimento);
 			request.setAttribute("salsa", listsalsa);
-			requestDispatcher = request.getRequestDispatcher("composition.jsp");
+			requestDispatcher = request.getRequestDispatcher(response.encodeURL("composition.jsp"));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

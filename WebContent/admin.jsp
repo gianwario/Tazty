@@ -57,7 +57,7 @@
 		
 	  		<div class="column_left">
 	  			<div id="home_redirect">
-	  				<a href="index.jsp" title="Ritorna alla home">
+	  				<a href=<%= response.encodeURL("index.jsp")%> title="Ritorna alla home">
 	  					<img src="images/logo-scritta.png" alt="Torna alla home" width="40%">
 	  				</a>
 	  			</div>
@@ -82,7 +82,7 @@
   			</div>
     		<fieldset id="hidden_element_panino" style="display:none">
   				<legend>Aggiungi panino al menu</legend>
-  				<form class="form" action="AddPanino" method="POST">
+  				<form class="form" action=<%= response.encodeURL("AddPanino")%> method="POST">
        				<div class="inputfield">
           				<label>Nome</label>
           				<input type="text" class="input" name="nome" id="nome" required>
@@ -114,7 +114,7 @@
 			
 			<fieldset id="hidden_element_bibita" style="display:none">
   				<legend>Aggiungi birra al menu</legend>
-  				<form class="form" action="AddBirra" method="POST">
+  				<form class="form" action=<%= response.encodeURL("AddBirra")%> method="POST">
        				<div class="inputfield">
           				<label>Nome</label>
           				<input type="text" class="input" name="nome" id="nome" required>
@@ -152,7 +152,7 @@
 			
 			<fieldset id="hidden_element_stuzzicheria" style="display:none">
   				<legend>Aggiungi stuzzicherie al menu</legend>
-  				<form class="form" action="AddStuzzicheria" method="POST">
+  				<form class="form" action=<%= response.encodeURL("AddStuzzicheria")%> method="POST">
        				<div class="inputfield">
           				<label>Nome</label>
           				<input type="text" class="input" name="nome" id="nome" required>
@@ -185,7 +185,7 @@
 			
 			<fieldset id="hidden_element_news" style="display:none">
   				<legend>Aggiungi notizia alla home</legend>
-  				<form class="form" action="AddNew" method="POST" enctype="multipart/form-data">
+  				<form class="form" action=<%= response.encodeURL("AddNew")%> method="POST" enctype="multipart/form-data">
        				<div class="inputfield">
           				<label>Titolo</label>
           				<input type="text" class="input" name="titolo" id="nome" required>

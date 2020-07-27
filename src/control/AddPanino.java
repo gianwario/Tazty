@@ -63,7 +63,7 @@ public class AddPanino extends HttpServlet {
 		try {
 			if (uDao.check(panino.getNome())) {
 				System.out.println("Il panino esiste gia.");
-				requestDispatcher = request.getRequestDispatcher("admin.jsp");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("admin.jsp"));
 				requestDispatcher.forward(request, response);
 			}
 
@@ -71,14 +71,13 @@ public class AddPanino extends HttpServlet {
 				uDao.doSave(panino);
 				request.getSession().setAttribute("panino", panino);
 				request.getSession().setMaxInactiveInterval(60);
-				requestDispatcher = request.getRequestDispatcher("admin.jsp");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("admin.jsp"));
 				requestDispatcher.forward(request, response);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(panino);
 		
 	}
 

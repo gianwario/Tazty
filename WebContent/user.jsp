@@ -55,7 +55,7 @@ if (request.getSession().getAttribute("utente") == null) {%>
 
 		<div class="column_left">
 			<div id="home_redirect">
-				<a href="index.jsp" title="Ritorna alla home"> <img
+				<a href=<%= response.encodeURL("index.jsp")%> title="Ritorna alla home"> <img
 					src="images/logo2.png" alt="Torna alla home" width="40%">
 				</a>
 			</div>

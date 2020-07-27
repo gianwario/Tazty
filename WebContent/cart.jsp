@@ -29,7 +29,7 @@
 <script src="js/cart.js"></script>
 </head>
 <body>
-	<h1><a href="Menu"><button id="menu-button">Torna al menù</button></a></h1>
+	<h1><a href=<%= response.encodeURL("Menu")%>><button id="menu-button">Torna al menù</button></a></h1>
 	<%
 		Carrello carrello = (Carrello) request.getSession().getAttribute("carrello");
 		float subTotal = 0;
@@ -72,7 +72,7 @@
 				</div>
 				<div class="price"><%= prodotto.getPrezzo() %></div>
 				<div class="remove">
-					<a href="CarrelloRimuovi?cod=<%= prodotto.getCod_prodotto()%>">Rimuovi</a>
+					<a href=<%= response.encodeURL("CarrelloRimuovi?cod=" + prodotto.getCod_prodotto())%> >Rimuovi</a>
 				</div>
 			</div>
 			<%
@@ -107,7 +107,7 @@
 				<div class="total-value final-value" id="basket-total"><%= subTotal + 5 %></div>
 			</div>
 			<div class="summary-checkout">			
-				<a href="complete-order.jsp"> 
+				<a href=<%= response.encodeURL("complete-order.jsp")%>> 
 				<button class="checkout-cta" type="submit">Procedi all'ordine</button></a>
 			</div>
 		</div>

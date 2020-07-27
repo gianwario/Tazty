@@ -12,6 +12,8 @@
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
 	rel="stylesheet">
 <script src="js/backtotop.js"></script>
+<link rel="stylesheet" href="css/mainpage.style/main.css"
+	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/gallery.css"
 	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/navbar.css"
@@ -27,14 +29,16 @@
 	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
 	rel="stylesheet">
 </head>
-<body onscroll="scrollFunction();">
+<body
+	style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; font-family: 'Balsamiq Sans', cursive;"
+	onload="slide(); newsLoading();" onscroll="scrollFunction();">
 
 
 	<div id="navbar">
 		<div id="texts_box">
-			<a class="nav-a" href="index.jsp">Home</a> <a class="nav-a"
-				href="index.jsp#news">News</a> <a class="nav-a"
-				href="index.jsp#contact">Contacts</a> <a class="nav-a" href="#">Gallery</a>
+			<a class="nav-a" href=<%= response.encodeURL("index.jsp")%>>Home</a> <a class="nav-a" href=<%= response.encodeURL("index.jsp#news")%>>News</a>
+			<a class="nav-a" href=<%= response.encodeURL("index.jsp#contact")%>>Contacts</a> <a class="nav-a"
+				href=<%= response.encodeURL("gallery.jsp")%>>Gallery</a>
 		</div>
 		<div class="dropdown">
 			<button onclick="myFunction()" class="dropbtn">
@@ -46,23 +50,39 @@
 				<%
 					if (request.getSession().getAttribute("utente") == null) {
 				%>
-				<a href="login.html">Login</a> <a href="register.html">Registrati</a> <a href="cart.jsp">Carrello</a>
+				<a href="login.html">Login</a> <a href="register.html">Registrati</a> <a href=<%= response.encodeURL("cart.jsp")%>>Carrello</a>
 				<%
 					} else {
 					UserBean u = (UserBean) request.getSession().getAttribute("utente");
 				%>
-				<a id="logout" href="Logout">Logout</a> <a href="User?username=<%= u.getUsername() %>">Profilo</a> <a href="cart.jsp">Carrello</a>
+				<a id="logout" href="Logout">Logout</a> <a href=<%= response.encodeURL("User?username="+u.getUsername())%>>Profilo</a> <a href=<%= response.encodeURL("cart.jsp")%>>Carrello</a>
 				<%
 					if (u.getIsadmin() == 1) {
 				%>
-				<a href="admin.jsp">Pagina Admin</a>
+				<a href=<%= response.encodeURL("admin.jsp")%>>Pagina Admin</a>
 				<%
 					}
 				}
 				%>
 			</div>
 		</div>
+		
+		<div class="dropdown2">
+		
+  			<button onclick="myFunction2()" class="dropbtn2">
+  				<span class="fa fa-bars" aria-hidden="true"></span>
+  			</button>
+  	
+  			<div id="myDropdown2" class="dropdown-content2">
+    			<a href="#">Home</a>
+    			<a href="#news">News</a>
+   				<a href="#contact">Contacts</a>
+   				<a href=<%= response.encodeURL("gallery.jsp")%>> Gallery</a>
+  			</div>
+		</div>
+		
 	</div>
+
 
 
 	<div class="gallery-div">
