@@ -1,5 +1,6 @@
 
 #panino_container {
+	height:600px;
 	margin-left: 20px;
 	flex-direction: column;
 	display: flex;

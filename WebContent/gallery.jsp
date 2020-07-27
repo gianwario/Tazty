@@ -294,7 +294,11 @@
 		</div>
 		<!-- end grid container -->
 	</div>
-
+	
+		<!-- FOOTER -->
+	<%@include file="footer.jsp" %>
+	
+	
 	<button onclick="topFunction()" id="myBtn" title="Torna su">
 		<i class="fa fa-chevron-up"></i>
 	</button>

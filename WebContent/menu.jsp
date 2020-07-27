@@ -153,6 +153,11 @@
 			
 		</div>
 	</div>
+	
+	<!-- FOOTER -->
+	<%@include file="footer.jsp" %>
+	
+	
 	<script>
 	function ricercaAjax(str) {
 		var dataList = document.getElementById('ricerca-datalist');
