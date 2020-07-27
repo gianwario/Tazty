@@ -31,11 +31,11 @@
 			<div class="title">Componi qui il tuo panino</div>
 			<div class="subtitle">
 				Visita anche il nostro <a
-					href="Menu"
+					href=<%= response.encodeURL("Menu")%>
 					id="menu">menù</a>!
 			</div>
 		</div>
-		<a href="index.jsp"> <img src="images/logo.png" id="logo"></a>
+		<a href=<%= response.encodeURL("index.jsp")%>> <img src="images/logo.png" id="logo"></a>
 
 		<div id="icons_container">
 
@@ -78,7 +78,7 @@
 		</div>
 
 	</div>
-	<form action="CarrelloCustom" method="POST" onSubmit="return fieldCheck()">
+	<form action="<%= response.encodeURL("CarrelloCustom")%>" method="POST" onSubmit="return fieldCheck()">
 	<div id="container">
 		<div id="panino_container">
 			<div class="panino_pics" id="pane-top-pic"></div>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Registrati</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/slide.js"></script>
+	<script src="js/validationform.js"></script>
+	<link rel="stylesheet" href="css/mainpage.style/slide.css" type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
+	<link rel="stylesheet" href="css/user.style/register.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper" style="border:3px solid red;">
+	<h2 style="color:red;text-align:center;">ERRORE REGISTRAZIONE, USERNAME GIA IN USO</h2>
+	<div class="logo_reg">
+		<a style="text-align:center;" href="index.jsp" title="Ritorna alla home">
+			<img src="images/logo2.png" alt="logo" style="height:40%;width:40%;">
+		</a>
+	</div>
+    
+    <form class="form" name="registration" action="Register" method="POST" onSubmit="return formValidation();">
+       <div class="inputfield">
+          <label>Username</label>
+          <input type="text" class="input" name="username" required>
+       </div> 
+       
+       <div class="inputfield">
+          <label>Nome</label>
+          <input type="text" class="input" name="nome" required>
+       </div>  
+       
+        <div class="inputfield">
+          <label>Cognome</label>
+          <input type="text" class="input" name="cognome" required>
+       </div>
+
+       <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" name="password" id="password" required>
+       </div>
+       <div class="hidden errore" id="errorepass">
+       		<div>Inserisci almeno un carattere maiuscolo, uno minuscolo, un numero e un carattere speciale.</div>
+       </div>
+       
+       <div class="inputfield">
+          <label>Email</label>
+          <input type="email" class="input" name="email" id="email" required>
+       </div>
+       <div class="hidden errore" id="erroreemail">
+       		<div>Inserisci un'email del tipo "email@email.it"</div>
+       </div> 
+      
+      
+      <div class="inputfield">
+          <label>Indirizzo</label>
+          <input type="text" class="input" name="indirizzo" required>
+       </div> 
+       
+      <div class="inputfield">
+          <label>Cellulare</label>
+          <input type="tel" class="input" name="phone" id="phone" required>
+       </div>
+       <div class="hidden errore" id="errorephone">
+       		<div>Inserisci un numero di telefono del tipo "+393311234567; 3311234567"</div>
+       </div>  
+
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+          </label>
+          <p>Acconsento al trattamento dei miei dati personali.</p>
+       </div> 
+       
+        <div class="redirect">
+          <a href="login.html">Ti sei giá registrato? Accedi subito.</a>
+       </div> 
+       
+      <div class="inputfield">
+        <input type="submit" value="Registrati" class="btn" >
+      </div>
+    </form>
+</div>
+
+</body>
+</html>

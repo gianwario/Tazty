@@ -47,7 +47,7 @@
 		<div id="texts_box">
 			<a class="nav-a" href="#">Home</a> <a class="nav-a" href="#news">News</a>
 			<a class="nav-a" href="#contact">Contacts</a> <a class="nav-a"
-				href="gallery.jsp">Gallery</a>
+				href=<%= response.encodeURL("gallery.jsp")%>>Gallery</a>
 		</div>
 		<div class="dropdown">
 			<button onclick="myFunction()" class="dropbtn">
@@ -59,16 +59,16 @@
 				<%
 					if (request.getSession().getAttribute("utente") == null) {
 				%>
-				<a href="login.html">Login</a> <a href="register.html">Registrati</a> <a href="cart.jsp">Carrello</a>
+				<a href="login.html">Login</a> <a href="register.html">Registrati</a> <a href=<%= response.encodeURL("cart.jsp")%>>Carrello</a>
 				<%
 					} else {
 					UserBean u = (UserBean) request.getSession().getAttribute("utente");
 				%>
-				<a id="logout" href="Logout">Logout</a> <a href="User?username=<%= u.getUsername() %>">Profilo</a> <a href="cart.jsp">Carrello</a>
+				<a id="logout" href="Logout">Logout</a> <a href=<%= response.encodeURL("User?username="+u.getUsername())%>>Profilo</a> <a href=<%= response.encodeURL("cart.jsp")%>>Carrello</a>
 				<%
 					if (u.getIsadmin() == 1) {
 				%>
-				<a href="admin.jsp">Pagina Admin</a>
+				<a href=<%= response.encodeURL("admin.jsp")%>>Pagina Admin</a>
 				<%
 					}
 				}
@@ -77,14 +77,16 @@
 		</div>
 		
 		<div class="dropdown2">
+		
   			<button onclick="myFunction2()" class="dropbtn2">
   				<span class="fa fa-bars" aria-hidden="true"></span>
   			</button>
+  	
   			<div id="myDropdown2" class="dropdown-content2">
     			<a href="#">Home</a>
     			<a href="#news">News</a>
    				<a href="#contact">Contacts</a>
-   				<a href="gallery.jsp"> Gallery</a>
+   				<a href=<%= response.encodeURL("gallery.jsp")%>> Gallery</a>
   			</div>
 		</div>
 		
@@ -111,11 +113,11 @@
 
 			<div id="buttons-box">
 				<div class="div-button-slide-menu">
-					<a href="Menu" style="text-decoration: none"
+					<a href=<%= response.encodeURL("Menu")%> style="text-decoration: none"
 						class="button-slide-menu">Menu</a>
 				</div>
 				<div class="div-button-slide-componi">
-					<a href="Composition" style="text-decoration: none"
+					<a href=<%= response.encodeURL("Composition")%> style="text-decoration: none"
 						class="button-slide-componi">Componi il tuo panino</a>
 				</div>
 			</div>

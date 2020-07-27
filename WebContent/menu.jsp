@@ -31,12 +31,12 @@
 	<div class="container">
 		<div class="header">
 			<div class="home_redirect">
-		  		<a href="index.jsp" title="Ritorna alla home">
+		  		<a href=<%= response.encodeURL("index.jsp")%> title="Ritorna alla home">
 		  		<img src="images/logo2.png" alt="Torna alla home" width="100%" height="90%">
 		  		</a>
 		  	</div>
 		  	<div class="wrap">
-					<form class="search" action="Ricerca" method="GET">
+					<form class="search" action=<%= response.encodeURL("Ricerca")%> method="GET">
 						<input class="searchTerm" type="text" placeholder="Cerca.."
 							name="cerca" onkeyup="ricercaAjax(this.value)" list="ricerca-datalist">
 						<button class="searchButton" type="submit">
@@ -47,7 +47,7 @@
 			</div>
 			<% Carrello c = (Carrello)session.getAttribute("carrello"); %>
 			<div id="order">
-				<a href="cart.jsp" id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello <%if(c!=null){ %>(<%= c.getprodotto().size() %>)<%} %></a>
+				<a href=<%= response.encodeURL("cart.jsp")%> id="order-link"><i class="fa fa-shopping-cart" style="height:100%;margin-right:10%;"></i>Carrello <%if(c!=null){ %>(<%= c.getprodotto().size() %>)<%} %></a>
 			</div>
 		</div>
 		

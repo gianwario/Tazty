@@ -63,7 +63,7 @@ public class AddStuzzicheria extends HttpServlet {
 		try {
 			if (uDao.check(stuzzicheria.getNome())) {
 				System.out.println("La stuzzicheria esiste gia.");
-				requestDispatcher = request.getRequestDispatcher("admin.jsp");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("admin.jsp"));
 				requestDispatcher.forward(request, response);
 			}
 
@@ -71,14 +71,13 @@ public class AddStuzzicheria extends HttpServlet {
 				uDao.doSave(stuzzicheria);
 				request.getSession().setAttribute("stuzzicheria", stuzzicheria);
 				request.getSession().setMaxInactiveInterval(60);
-				requestDispatcher = request.getRequestDispatcher("admin.jsp");
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("admin.jsp"));
 				requestDispatcher.forward(request, response);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(stuzzicheria);
 		
 	}
 

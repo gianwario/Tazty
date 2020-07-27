@@ -60,7 +60,7 @@ public class Menu extends HttpServlet {
 			request.setAttribute("stuzzicherie", sb);
 			request.setAttribute("birre", bb);
 			
-			requestDispatcher = request.getRequestDispatcher("menu.jsp");
+			requestDispatcher = request.getRequestDispatcher(response.encodeURL("menu.jsp"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

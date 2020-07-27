@@ -79,7 +79,7 @@ public class AddNew extends HttpServlet {
 		
 		try {
 			dao.doSave(news);
-			RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher(response.encodeURL("admin.jsp"));
 			rd.forward(request, response);
 		} catch (SQLException e) { e.printStackTrace(); }
 	}

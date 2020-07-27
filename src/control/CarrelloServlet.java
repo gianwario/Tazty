@@ -2,6 +2,7 @@ package control;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -55,10 +56,8 @@ public class CarrelloServlet extends HttpServlet {
 		}
 		carrello.add(prodotto);
 		
-
-
-		
-		response.sendRedirect("Menu");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher(response.encodeURL("Menu"));
+		requestDispatcher.forward(request, response);
 	}
 
 }

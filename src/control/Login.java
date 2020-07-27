@@ -63,10 +63,12 @@ public class Login extends HttpServlet {
 		if(u!=null) {
 			request.getSession().setAttribute("utente", u);
 			request.getSession().setMaxInactiveInterval(3600);
-			requestDispatcher = request.getRequestDispatcher("index.jsp");
+			String encodedURL = response.encodeURL("index.jsp");
+			requestDispatcher = request.getRequestDispatcher(encodedURL);
 		}
 		else {
-			requestDispatcher = request.getRequestDispatcher("register.html");
+			
+			requestDispatcher = request.getRequestDispatcher("login-error.html");
 		}
 		requestDispatcher.forward(request, response);
 	}

@@ -83,7 +83,7 @@ public class CompletaOrdine extends HttpServlet {
 				
 			}
 						
-			RequestDispatcher rd = request.getRequestDispatcher("Menu");
+			RequestDispatcher rd = request.getRequestDispatcher(response.encodeURL("Menu"));
 			rd.forward(request, response);
 		} 
 		catch (SQLException e) { e.printStackTrace(); }
