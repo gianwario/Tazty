@@ -32,6 +32,7 @@
 	<h1><a href="Menu"><button id="menu-button">Torna al menù</button></a></h1>
 	<%
 		Carrello carrello = (Carrello) request.getSession().getAttribute("carrello");
+		UserBean u = (UserBean) request.getSession().getAttribute("utente");
 		float subTotal = 0;
 		if (carrello == null || carrello.getprodotto().isEmpty()) {
 	%>
@@ -106,10 +107,17 @@
 				<div class="total-title">Totale</div>
 				<div class="total-value final-value" id="basket-total"><%= subTotal + 5 %></div>
 			</div>
-			<div class="summary-checkout">			
-				<a href="complete-order.jsp"> 
-				<button class="checkout-cta" type="submit">Procedi all'ordine</button></a>
-			</div>
+			<%if(u == null) {%>
+				<div class="summary-checkout">			
+					<a href="login.html"> 
+					<button class="checkout-cta" style="border: 3px solid red;" type="submit">Effettua l'accesso per procedere all'ordine</button></a>
+				</div>
+			<%} else { %>
+				<div class="summary-checkout">			
+					<a href=<%= response.encodeURL("complete-order.jsp")%>> 
+					<button class="checkout-cta" type="submit">Procedi all'ordine</button></a>
+				</div>
+			<%} %>
 		</div>
 	</div>
 	<%} %>
