@@ -1,10 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="js/slide.js"></script>
+	<link rel="stylesheet" href="css/mainpage.style/slide.css" type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/main.css" type="text/css">
+	<link rel="stylesheet" href="css/mainpage.style/navbar.css" type="text/css">
+	<link rel="stylesheet" href="css/user.style/register.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<p>Errore login</p>
+<div class="wrapper" style="border:3px solid red;">
+	<h1 style="color:red;text-align:center;">ERRORE LOGIN, RIPROVA</h1>
+	<div class="logo_reg">
+		<a style="text-align:center;" href="index.jsp" title="Ritorna alla home">
+			<img src="images/logo2.png" alt="logo" style="height:40%;width:75%;">
+		</a>
+	</div>
+    
+    <form class="form" action="Login" method="POST">
+       <div class="inputfield">
+          <label>Username</label>
+          <input type="text" class="input" id="username" name="username" required>
+       </div> 
+       
+       <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" id="password" name="password"  required>
+       </div>  
+       
+       <div class="redirect">
+          <a href="register.html">Non ti sei ancora registrato? Registrati subito.</a>
+       </div> 
+       
+      <div class="inputfield">
+        <input type="submit" value="Login" class="btn" >
+      </div>
+    </form>
+</div>
+
 </body>
 </html>
