@@ -120,11 +120,6 @@
 				</div>
 			<%} %>
 
-			<div class="summary-checkout">			
-				<a href=<%= response.encodeURL("complete-order.jsp")%>> 
-				<button class="checkout-cta" type="submit">Procedi all'ordine</button></a>
-			</div>
-
 		</div>
 	</div>
 	<%} %>
