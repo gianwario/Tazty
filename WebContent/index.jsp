@@ -10,6 +10,7 @@
 <head>
 <title>Tazty</title>
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="favicon.ico"/>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
