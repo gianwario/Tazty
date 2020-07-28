@@ -23,7 +23,6 @@ public class UserDAO {
 				ub.setIndirizzo(rs.getString("indirizzo"));
 				ub.setCellulare(rs.getString("cellulare"));
 				ub.setIsadmin(rs.getInt("isAdmin"));
-				System.out.println(ub);
 				return ub;
 			}
 			return null;

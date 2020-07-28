@@ -43,7 +43,6 @@ public class User extends HttpServlet {
 		
 		RequestDispatcher requestDispatcher = null;
 		String username = request.getParameter("username");
-		System.out.println(username);
 		try {
 			ArrayList<OrdineBean> pb = pd.getOrdineList(username);
 			

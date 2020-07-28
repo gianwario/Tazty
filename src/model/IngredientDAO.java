@@ -23,7 +23,6 @@ public class IngredientDAO {
 				ing.setNome(rs.getString("nome"));
 				ing.setTipo(rs.getString("tipologia"));
 				ing.setPrezzo(rs.getDouble("prezzo"));
-				System.out.println(ing);
 				list.add(ing);
 			}			
 		}		
@@ -46,7 +45,6 @@ public class IngredientDAO {
 				ing.setNome(rs.getString("nome"));
 				ing.setTipo(rs.getString("tipologia"));
 				ing.setPrezzo(rs.getDouble("prezzo"));
-				System.out.println(ing);
 				return ing;
 			}			
 		}		

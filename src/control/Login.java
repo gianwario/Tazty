@@ -59,7 +59,6 @@ public class Login extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(u);
 		if(u!=null) {
 			request.getSession().setAttribute("utente", u);
 			request.getSession().setMaxInactiveInterval(3600);

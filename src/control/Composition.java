@@ -49,7 +49,7 @@ public class Composition extends HttpServlet {
 			ArrayList<IngredientBean> listcondimento = id.getIngredientsByType("condimento");
 			ArrayList<IngredientBean> listsalsa = id.getIngredientsByType("salsa");
 			
-			System.out.println(listpane + "\n" + listcarne + "\n" + listcondimento + "\n" + listsalsa + "\n");
+
 			request.setAttribute("pane", listpane);
 			request.setAttribute("carne", listcarne);
 			request.setAttribute("condimento", listcondimento);

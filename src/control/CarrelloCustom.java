@@ -50,7 +50,7 @@ public class CarrelloCustom extends HttpServlet {
 				+ Double.parseDouble(request.getParameter("add1")) + Double.parseDouble(request.getParameter("add2")) +				
 				Double.parseDouble(request.getParameter("salse")));
 		
-		System.out.println(pb.getPrezzo());
+
 		
 		HttpSession session = request.getSession();
 		Carrello carrello = (Carrello) session.getAttribute("carrello");

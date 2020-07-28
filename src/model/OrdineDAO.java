@@ -27,9 +27,7 @@ public class OrdineDAO {
 				ob.setPagamento(rs.getString("pagamento"));
 
 				list.add(ob);
-				System.out.println(ob.getCod_ordine());
 			}
-			System.out.println(list);
 			for (OrdineBean o : list) {
 				PreparedStatement ps2 = con.prepareStatement(
 						"select * from prodotto,relativoa where prodotto.cod_prodotto=relativoa.cod_prodotto AND relativoa.cod_ordine = ?");
@@ -40,7 +38,6 @@ public class OrdineDAO {
 					pb.setNome(rs2.getString("nome"));
 					pb.setPrezzo(Double.parseDouble(rs2.getString("prezzo")));
 					o.addProduct(pb);
-					System.out.println(pb.getNome());
 				}
 			}
 			return list;
