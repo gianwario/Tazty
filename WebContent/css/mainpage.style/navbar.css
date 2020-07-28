@@ -152,7 +152,7 @@
 	}
 	
 	.dropdown {
-  		height: 3.9rem;
+  		width:auto;
   	}
 	
 	.dropdown-content {
@@ -160,7 +160,7 @@
 	}
 	
 	.dropbtn {
-		padding: 2px;
+		
 	}
 	#navbar {
 		justify-content: flex-start;

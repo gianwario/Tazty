@@ -2,6 +2,8 @@ html {
 	scroll-behavior: smooth;
 }
 
+button:focus {outline:0;}
+
 #home {
 	width:100%;
 	height: 100%;
@@ -174,15 +176,22 @@ html {
 	#home {
 		background-image: url("../../images/Slideshow/Slide1.jpg");
 		background-size: 100% 100%;
-		margin-top: 11.3%;
-		padding-bottom: 30px;
+		margin-top: 19%;
+		
 	}
-
-
+	
+	#google-maps iframe{
+		width:100%!important;
+		heigth:100%!important;
+	}
+	.box_dx{
+		width:100%!important;
+	}
  	
+	
 }
 
-@media screen and (min-width: 900px) and (max-width: 1280px) {
+@media screen and (min-width: 800px) and (max-width: 1280px) {
 
 	.text {
   		margin-top: 40%;
@@ -191,15 +200,30 @@ html {
  	}
  	
  	.button-slide-menu{
- 		padding:8px 40px;
- 		font-size: 20px;
+ 		padding:12px 40px;
+ 		font-size: 14px;
  	}
  	
  	.button-slide-componi{
- 		padding:12px 40px;
- 		font-size: 20px;
+ 		padding:12px 17px;
+ 		font-size: 14px;
  	}
 	
+	.dropdown{
+		margin-left: 1%;
+		width:14%!important;
+	}
+	
+	#news{
+		padding-top:7%!important;
+		margin-top:0%!important;
+	}
 } 	
 
+@media screen and (max-width: 800px) {
+	#news{
+		margin-top: 0%!important;
+    	padding-top: 8%!important;
+	}
+	}
 

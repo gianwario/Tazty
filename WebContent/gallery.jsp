@@ -12,6 +12,7 @@
 	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
 	rel="stylesheet">
 <script src="js/backtotop.js"></script>
+<script src="js/slide.js"></script>
 <link rel="stylesheet" href="css/mainpage.style/main.css"
 	type="text/css">
 <link rel="stylesheet" href="css/mainpage.style/gallery.css"
