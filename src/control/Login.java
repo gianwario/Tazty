@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
 		RequestDispatcher requestDispatcher = null;
 		
 		if(username==null || password==null || password.length() < 6) {
-			requestDispatcher = request.getRequestDispatcher("register.html");
+			requestDispatcher = request.getRequestDispatcher("login-error.html");
 			requestDispatcher.forward(request, response);
 			return;
 		}

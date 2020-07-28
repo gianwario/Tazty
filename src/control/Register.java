@@ -67,7 +67,7 @@ public class Register extends HttpServlet {
 		try {
 			if (uDao.check(utente.getUsername())) {
 				System.out.println("L'utente esiste gia.");
-				requestDispatcher = request.getRequestDispatcher(response.encodeURL("register.html"));
+				requestDispatcher = request.getRequestDispatcher(response.encodeURL("register-error.html"));
 			}
 
 			else {
