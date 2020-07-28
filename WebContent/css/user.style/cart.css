@@ -398,4 +398,10 @@ aside {
 	.row,.row2{
 		width:100%;
 	}
+	#menu-button{
+		left: 0px;
+   	 	width: 100%;
+   	 	position: static;
+   	 	padding: 2%;
+	}
 }
