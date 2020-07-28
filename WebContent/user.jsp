@@ -40,16 +40,21 @@
 		}
 		window.scrollTo(0, document.body.scrollHeight);
 	}
-	function redirect() {
-<%UserBean u = (UserBean) request.getSession().getAttribute("utente");
-if (request.getSession().getAttribute("utente") == null) {%>
-	window.location.href = "index.jsp";
-<%}%>
-	}
+
 </script>
 </head>
-<body onload="redirect()" onscroll="scrollFunction();">
+<body onscroll="scrollFunction();">
 
+	<%
+			 UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
+			if(u==null){
+				
+			 		out.println("<script type=\"text/javascript\">");
+			 		out.println("alert('Errore. Effettuare il login');");
+			 		out.println("window.location.href = \"login.html\";");
+				 	out.println("</script>");
+				} else {
+			%>
 
 	<div id="container">
 
@@ -130,6 +135,6 @@ if (request.getSession().getAttribute("utente") == null) {%>
 				<button onclick="topFunction()" id="myBtn" title="Torna su">
 					<i class="fa fa-chevron-up"></i>
 				</button>
-
+	<% } %>
 </body>
 </html>

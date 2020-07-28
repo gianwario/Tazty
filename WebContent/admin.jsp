@@ -29,28 +29,20 @@
 			    }
 			    window.scrollTo(0,document.body.scrollHeight);
 		  }
-	  function redirect()
-	  {
-		  <%
-		  UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
-			if(request.getSession().getAttribute("utente")==null){
-		  
-		  %>window.location.href="index.jsp";
-		  <%}%>
-	  }
-	  
 	</script>
 </head>
-<body onload="redirect()" onscroll="scrollFunction();">
+<body onscroll="scrollFunction();">
 
 			<%
-			if(u!=null&&u.getIsadmin() !=1)
-		 	{	
-		 		out.println("<script type=\"text/javascript\">");
-		 		out.println("alert('Non sei un amministratore');");
-		 		out.println("window.location.href = \"index.jsp\";");
-			 	out.println("</script>");
-			}
+			 UserBean u = (UserBean)request.getSession().getAttribute("utente"); 	
+			if(u!=null){
+				if(u.getIsadmin() !=1)
+			 	{	
+			 		out.println("<script type=\"text/javascript\">");
+			 		out.println("alert('Non sei un amministratore');");
+			 		out.println("window.location.href = \"index.jsp\";");
+				 	out.println("</script>");
+				} else {
 			%>
 	
 		<div id="container">
@@ -216,6 +208,14 @@
   	<button onclick="topFunction()" id="myBtn" title="Torna su">
 		<i class="fa fa-chevron-up"></i>
 	</button>
-
+	<% 		}
+		}
+		else { 
+			out.println("<script type=\"text/javascript\">");
+	 		out.println("alert('Errore. Effettuare il login');");
+	 		out.println("window.location.href = \"login.html\";");
+		 	out.println("</script>");
+		} 
+	%>
 </body>
 </html>
