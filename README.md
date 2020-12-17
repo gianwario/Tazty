@@ -1,7 +1,6 @@
 # Tazty
 Progetto per l'esame di Tecnologie Software per il Web del corso di laurea in informatica presso l'Università degli studi di Salerno.
-<div style="width:100%; display:flex; align-items:center">
-<img src="https://github.com/yabokk/Tazty/blob/master/WebContent/images/logo2.png?raw=true" height=210px width=300px> </div>
+<img src="https://github.com/yabokk/Tazty/blob/master/WebContent/images/logo2.png?raw=true" height=210px width=300px>
 
 <h2><b>Obiettivo del progetto</b></h2>
 <p> Il sito ha come obiettivo quello di fornire una vetrina al pub “Tazty”, specializzato nella vendita di
@@ -30,4 +29,7 @@ La Galleria contiene gli scatti piú belli e creativi dei panini e delle stuzzic
 Nell’header è presente una sezione in cui è possibile effettuare il login o la registrazione,
 visualizzare la propria area utente e accedere al carrello per poter effettuare degli acquisti.</p>
 
-
+<p>By<br>
+<a href="https://github.com/yabokk">Gianmario Voria</a><br>
+<a href="https://github.com/vipenti">Viviana Pentangelo</a><br>
+<a href="https://github.com/BearGrillz99">Alessio Casolaro</a></p>
