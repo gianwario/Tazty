@@ -1,5 +1,6 @@
 # Tazty
-Progetto per l'esame di Tecnologie Software per il Web del corso di laurea in informatica presso l'Università degli studi di Salerno.
+Progetto per l'esame di Tecnologie Software per il Web del corso di laurea in informatica presso l'Università degli studi di Salerno.<br>
+
 <img src="https://github.com/yabokk/Tazty/blob/master/WebContent/images/logo2.png?raw=true" height=210px width=300px>
 
 <h2><b>Obiettivo del progetto</b></h2>
